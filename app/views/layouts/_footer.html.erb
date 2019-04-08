@@ -1,0 +1,63 @@
+<div id="footer" >
+    <div class="text-center">
+        <h1>Vì Sao Bạn Chọn Việt Travel</h1>
+        <div class="jumbotron"></div>     
+    </div>
+    <div class="contact" >
+        <div class="container">
+            <div class="row ">
+                <div class="col-sm-7">
+                    <h4 class="text-center">Liên Hệ</h4>
+                    <div class="col-sm-5">
+                        <p><span class="glyphicon glyphicon-map-marker"></span>  Đại Học Duy Tân, TP.Đà Nẵng</p>
+                        <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+                        <p><span class="glyphicon glyphicon-envelope"></span> TourBooking@gmai.com</p> 
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <input class="form-control" id="email" name="email" placeholder="Email" type="email"required>
+                            </div>
+                        </div>
+                        <textarea class="form-control" id="comments" name="comments" placeholder="Comment..." rows="5"></textarea><br>
+                        <button class="btn btn-default pull-right" type="submit">Send</button>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="col-sm-6">
+                        <h4>Chấp Nhận Thanh Toán</h4>
+                        <%= image_tag 'bank.png', class: '' %>
+                    </div>
+                    <div class="col-sm-6">            
+                        <h4>Kết Nối Với Chúng Tôi</h4>
+                        <ul class="icon">
+                            <li>
+                            <%= link_to 'https://www.facebook.com/profile.php?id=100004067478544', class: 'images' do %>
+                            <%= image_tag 'facebook.png', class: '' %>
+                            <% end %>
+                            </li>
+                            <li>
+                            <%= link_to 'https://www.instagram.com/', class: 'images' do %>
+                            <%= image_tag 'instagram.png', class: '' %>
+                            <% end %>
+                            </li>
+                            <li>
+                            <%= link_to 'https://twitter.com/', class: 'images' do %>
+                            <%= image_tag 'twitter.png', class: '' %>
+                            <% end %>
+                            </li>
+                            <li>
+                            <%= link_to 'https://www.youtube.com/channel/UCdDfl6yllxZlf1ME9poXw6g', class: 'images' do %>
+                            <%= image_tag 'youtube.png', class: '' %>
+                            <% end %>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+</div>

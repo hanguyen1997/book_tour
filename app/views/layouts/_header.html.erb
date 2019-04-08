@@ -1,0 +1,124 @@
+<div id="header"> 
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="home">
+                  <%= image_tag'logo.png', class: 'logo'  %>
+                    
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="home">Trang Chủ</a></li>
+                    <li><a href="domestic">Tour Trong Nước</a></li>
+                    <li><a href="international">Tour Quốc Tế</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a data-toggle="modal" href="#myModalLogin">
+                                    <span class="glyphicon glyphicon-log-in"></span> Đăng Nhập
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="modal" href="#myModalLogout">
+                                    <span class="glyphicon glyphicon-registration-mark"></span> Đăng Kí</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="glyphicon glyphicon-log-out"></span> Đăng Xuất</a>
+                            </li> 
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+  </nav> 
+</div>
+
+<!-- Modal login -->
+<div class="modal fade" id="myModalLogin" role="dialog">
+    <div class="modal-dialog">    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h1> Đăng Nhập</h1>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label ><span class="glyphicon glyphicon-user"></span> Email</label>
+              <input type="text" class="form-control" name="username" placeholder="Nhập email...">
+            </div>
+            <div class="form-group">
+              <label><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="password" class="form-control" name="password" placeholder="Nhập password...">
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked>Nhớ mật khẩu</label>
+            </div>
+              <button type="submit" class="btn btn-warning btn-block">Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+         <h5><a href="#">Quên Mật Khẩu ?</a></h5>
+          <h5 class="text-center">Đăng Nhập Với Ứng Dụng</h5>
+            <ul class="icon text-center">
+              <li><a href=""><img src="images/facebook.png" alt=""></a></li>
+              <li><a href=""><img src="images/instagram.png" alt=""></a></li>
+              <li><a href=""><img src="images/twitter.png" alt=""></a></li>
+              <li><a href=""><img src="images/youtube.png" alt=""></a></li>
+            </ul>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>      
+    </div>
+</div>
+<!-- Modal logout -->
+<div class="modal fade" id="myModalLogout" role="dialog">
+    <div class="modal-dialog">    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h1> Đăng Kí</h1>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label><span class=" glyphicon glyphicon-user"></span> Name</label>
+              <input type="text" class="form-control" name="username" placeholder="Nhập name...">
+            </div>
+            <div class="form-group">
+              <label><span class=" glyphicon glyphicon-envelope"></span> Email</label>
+              <input type="text" class="form-control" name="email" placeholder="Nhập email...">
+            </div>
+            <div class="form-group">
+              <label><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="password" class="form-control" name="password" placeholder="Nhập password...">
+            </div>
+            <div class="form-group">
+              <label><span class="glyphicon glyphicon-map-marker"></span> Address</label>
+              <input type="text" class="form-control" name="address" placeholder="Nhập address...">
+            </div>
+            <div class="form-group">
+              <label><span class="glyphicon glyphicon-earphone"></span> Phone</label>
+              <input type="text" class="form-control" name="phone" placeholder="Nhập address...">
+            </div>
+              <button type="submit" class="btn btn-warning btn-block">Đăng Kí</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>      
+    </div>
+</div>
