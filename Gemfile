@@ -13,6 +13,11 @@ gem "jbuilder", "~> 2.5"
 gem "capistrano-rails", group: :development
 gem "bootstrap-sass", "3.3.7"
 gem "bootsnap", ">= 1.1.0", require: false
+gem 'pry'
+gem 'faker'        
+gem 'will_paginate'       
+gem 'bootstrap-will_paginate'
+gem 'bcrypt', '3.1.12'
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
