@@ -1,0 +1,37 @@
+<% provide(:title, "Domestic")%>
+<div class="content">
+    <div class="container">
+    <div class="row text-center">
+       <div class="tourViet">
+       <% if params[:filter] == "tours_domestic" %>
+          <h1>Tour Trong Nước</h1>
+            <p>Việt Nam vẻ đẹp bất tận, điểm đến của mọi nhà!!!</p>   
+            <% @tours_domestic.each do |tour_domestic| %>
+                <div class="col-sm-3 "> 
+                    <div class="thumbnail ">
+                    <%= link_to 'detail', class: 'images' do %>
+                    <%= image_tag 'NinhBinh2.jpg', class: '' %>
+                    <% end %>
+                    <p><strong > <%= tour_domestic.name %></strong></p>
+                    <a href="detail" class="xemTour btn">Xem Tour</a>
+                    </div>                     
+                </div>
+            <% end %>
+        <% else %>
+            <h1>Tour The gioi</h1>
+            <p>thees gioi vẻ đẹp bất tận, điểm đến của mọi nhà!!!</p>   
+            <% @tours_international.each do |tour_international| %>
+                <div class="col-sm-3 "> 
+                    <div class="thumbnail ">
+                    <%= link_to 'detail', class: 'images' do %>
+                    <%= image_tag 'thailand.jpg', class: '' %>
+                    <% end %>
+                    <p><strong > <%= tour_international.name %></strong></p>
+                    <a href="detail" class="xemTour btn">Xem Tour</a>
+                    </div>                     
+                </div>
+            <% end %>
+        <% end %>  
+        </div>
+    </div>
+</div> 

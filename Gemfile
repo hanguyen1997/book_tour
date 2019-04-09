@@ -15,7 +15,7 @@ gem "bootstrap-sass", "3.3.7"
 gem "bootsnap", ">= 1.1.0", require: false
 gem 'pry'
 gem 'faker'        
-gem 'will_paginate'       
+gem 'will_paginate', '3.1.7'   
 gem 'bootstrap-will_paginate'
 gem 'bcrypt', '3.1.12'
 

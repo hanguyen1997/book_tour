@@ -7,16 +7,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>                        
                 </button>
-                <a class="navbar-brand" href="home">
-                  <%= image_tag'logo.png', class: 'logo'  %>
-                    
-                </a>
+                <%= link_to image_tag('logo.png'), root_path, class: "navbar-brand" %>
+                  
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="home">Trang Chủ</a></li>
-                    <li><a href="domestic">Tour Trong Nước</a></li>
-                    <li><a href="international">Tour Quốc Tế</a></li>
+                    <li><%= link_to "Trang Chủ", root_path %></li>
+                    <li><%= link_to "Tour Trong Nước", tours_path(filter: "tours_domestic")%></li>
+                    <li><%= link_to "Tour Quốc Tế", tours_path(filter: "tours_international") %></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <span class="glyphicon glyphicon-user"></span>

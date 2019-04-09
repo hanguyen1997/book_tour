@@ -1,24 +1,11 @@
 Category.delete_all
 Category.create!([
   {name: "Vietnam Tour", description: Faker::Lorem.sentence},
-  {name: "World Tour", description: Faker::Lorem.sentence},
-  {name: "North Vietnam", description: Faker::Lorem.sentence, parent_id: 1},
-  {name: "South Vietnam", description: Faker::Lorem.sentence, parent_id: 1},
-  {name: "Central Vietnam", description: Faker::Lorem.sentence, parent_id: 1},
-  {name: "Europe", description: Faker::Lorem.sentence, parent_id: 2},
-  {name: "Asian", description: Faker::Lorem.sentence, parent_id: 2},
-  {name: "Califonia", description: Faker::Lorem.sentence, parent_id: 2},
-  {name: "Ha Noi", description: Faker::Lorem.sentence, parent_id: 3},
-  {name: "Ho Chi Minh", description: Faker::Lorem.sentence, parent_id: 4},
-  {name: "Da Nang", description: Faker::Lorem.sentence, parent_id: 5},
-  {name: "Italia", description: Faker::Lorem.sentence, parent_id: 6},
-  {name: "France", description: Faker::Lorem.sentence, parent_id: 6},
-  {name: "Korea", description: Faker::Lorem.sentence, parent_id: 7},
-  {name: "Japan", description: Faker::Lorem.sentence, parent_id: 7}
+  {name: "World Tour", description: Faker::Lorem.sentence}
 ])
 
 Tour.delete_all
-13.times{
+30.times{
   image = File.open(File.join(Rails.root, "app/assets/images/da-nang.jpg"))
   Tour.create!(
     name: Faker::Coffee.blend_name,
@@ -26,7 +13,7 @@ Tour.delete_all
     image: image,
     itinerary: Faker::Lorem.sentence,
     content: Faker::Lorem.paragraph,
-    category_id: Faker::Number.between(1, 15)
+    category_id: Faker::Number.between(1, 2)
   )
 }
 
