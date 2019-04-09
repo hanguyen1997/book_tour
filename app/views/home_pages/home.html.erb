@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<!-- Silder -->
+<div class="slider">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" >
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <a href="#">
+                    <%=image_tag("da-nang.jpg") %>
+                    
+                </a>
+                <div class="carousel-caption">
+                    <h1>Đà Nẵng-Sơn Trà-Bà Nà-Hội An</h1>
+                </div>      
+            </div>
+
+            <div class="item">
+                <a href="">
+                    <%=image_tag("NinhBinh2.jpg") %>
+                    
+                </a>       
+                <div class="carousel-caption">
+                    <h1>Tràng An- Chùa Bái Đính - Hang Múa</h1>
+                </div>      
+            </div>
+            <div class="item">
+                <a href="">
+                    <%=image_tag("thailand.jpg") %>
+                   
+                </a>
+                <div class="carousel-caption">
+                    <h1>Thái Lan</h1>
+                </div>      
+            </div>
+            <div class="item">
+                <a href="#">
+                    <%=image_tag("Singapore.jpg") %>
+                
+                </a>        
+                <div class="carousel-caption">
+                    <h1>Singapore</h1>
+                </div>      
+            </div>
+        </div>
+    </div>
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Search -->
+<div class="search">
+    <div class="container text-center">
+        <form class="form-inline">
+            <div class="input-group">
+                <input type="text" class="form-control" size="150" placeholder="Bạn Muốn Đi Đâu?" required/>
+                <div class="input-group-btn" >
+                    <button type="button" class="btn btn-warning">Tìm Tour</button>
+                </div>
+            </div>
+        </form>
+  </div>
+</div>
+
+<!-- content -->
+<div class="content">
+    <div class="container">
+    <div class="row text-center">
+        <div class="tourViet">
+            <h1>Tour Trong Nước</h1>
+            <p>Việt Nam vẻ đẹp bất tận, điểm đến của mọi nhà!!!</p>   
+                <% @tours_domestic.each do |tour_domestic| %>
+                <div class="col-sm-3 "> 
+                   <div class="thumbnail ">
+                        <%= link_to 'detail', class: 'images' do %>
+  						<%= image_tag 'NinhBinh2.jpg', class: '' %>
+						<% end %>
+                        <p><strong > <%= tour_domestic.name %></strong></p>
+                        <a href="detail" class="xemTour btn">Xem Tour</a>
+                    </div>                     
+                </div>
+                <% end %>   
+        </div>
+        <a class="views" href="domestic">Xem Thêm</a>
+        <div class="tourngoai">
+            <h1>Tour Quốc tế</h1>
+            <p>Việt Nam vẻ đẹp bất tận, điểm đến của mọi nhà!!!</p>            
+                 <% @tours_international.each do |tour_international| %>
+                <div class="col-sm-3 "> 
+                   <div class="thumbnail ">
+                        <%= link_to 'detail', class: 'images' do %>
+                        <%= image_tag 'da-nang.jpg', class: '' %>
+                        <% end %>
+                        <p><strong > <%= tour_international.name %></strong></p>
+                        <a href="detail" class="xemTour btn">Xem Tour</a>
+                    </div>                     
+                </div>
+                <% end %>
+                <a class="views" href="international">Xem Thêm</a>  
+        </div>
+    </div>
+</div>   
+</div>
+</body>
+</html>
+
+
