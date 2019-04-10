@@ -20,18 +20,18 @@
                         <span class="glyphicon glyphicon-user"></span>
                         <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a data-toggle="modal" href="#myModalLogin">
-                                    <span class="glyphicon glyphicon-log-in"></span> Đăng Nhập
-                                </a>
-                            </li>
-                            <li>
-                                <a data-toggle="modal" href="#myModalLogout">
-                                    <span class="glyphicon glyphicon-registration-mark"></span> Đăng Kí</a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="glyphicon glyphicon-log-out"></span> Đăng Xuất</a>
-                            </li> 
+                            <% if logged_in? %>
+                              <li>
+                                <%= link_to(raw("<span class='glyphicon glyphicon-log-out'> Đăng Xuất</span>"), logout_path, method: :delete ) %>
+                              </li>
+                            <% else %>
+                              <li>
+                                <%= link_to(raw("<span class='glyphicon glyphicon-log-in'> Đăng Nhập</span>"), login_path) %>
+                              </li>
+                              <li>
+                                <%= link_to(raw("<span class='glyphicon glyphicon-registration-mark'> Đăng Kí</span>"), login_path) %>
+                              </li>
+                            <% end %>
                         </ul>
                     </li>
                 </ul>
