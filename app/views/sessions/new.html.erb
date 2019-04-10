@@ -1,0 +1,37 @@
+<% provide(:title, "login")%>
+<html lang="en">
+<body>
+<div class="login">
+    <div class="modal-dialog">    
+      <div class="modal-content">
+        <div class="modal-header">
+        	<h1> Đăng Nhập</h1>
+        </div>
+        <div class="modal-body">
+        	<div class="form-group">
+   			   <%= form_for(:session, url: login_path) do |f| %>
+              <%= f.label :email,class: "glyphicon glyphicon-user" %>
+              <%= f.email_field :email, class: 'form-control', placeholder: "Nhập email..." %>
+ 			        <%= f.label :Password,class: "glyphicon glyphicon-eye-open" %>
+              <%= f.password_field :password, class: 'form-control', placeholder: "Nhập email..." %>
+               <%= f.submit "Log in", class: "btn btn-warning btn-block"%>
+           
+         	<% end %>
+         	</div>
+          <p>New user? <%= link_to "Sign up now!", login_path %></p>
+        </div>
+        <div class="modal-footer">
+         <h5><a href="#">Quên Mật Khẩu ?</a></h5>
+          <h5 class="text-center">Đăng Nhập Với Ứng Dụng</h5>
+            <ul class="icon text-center">
+              <li><a href=""><img src="images/facebook.png" alt=""></a></li>
+              <li><a href=""><img src="images/instagram.png" alt=""></a></li>
+              <li><a href=""><img src="images/twitter.png" alt=""></a></li>
+              <li><a href=""><img src="images/youtube.png" alt=""></a></li>
+            </ul>
+        </div>
+      </div>      
+    </div>
+</div>
+  </body>
+</html>
