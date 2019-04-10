@@ -13,12 +13,12 @@
                     <%= image_tag 'NinhBinh2.jpg', class: '' %>
                     <% end %>
                     <p><strong > <%= tour_domestic.name %></strong></p>
-                    <a href="detail" class="xemTour btn">Xem Tour</a>
+                    <%= link_to 'Xem Tour', tour_domestic, class: 'xemTour btn'%>
                     </div>                     
                 </div>
             <% end %>
         <% else %>
-            <h1>Tour The gioi</h1>
+            <h1>Tour Thế Giới</h1>
             <p>thees gioi vẻ đẹp bất tận, điểm đến của mọi nhà!!!</p>   
             <% @tours_international.each do |tour_international| %>
                 <div class="col-sm-3 "> 
@@ -27,7 +27,7 @@
                     <%= image_tag 'thailand.jpg', class: '' %>
                     <% end %>
                     <p><strong > <%= tour_international.name %></strong></p>
-                    <a href="detail" class="xemTour btn">Xem Tour</a>
+                    <%= link_to 'Xem Tour', tour_international, class: 'xemTour btn'%>
                     </div>                     
                 </div>
             <% end %>

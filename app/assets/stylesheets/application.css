@@ -1,22 +1,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
 #header nav{
-	
-	padding-top: 15px;
-	padding-bottom: 15px;
-	text-transform: uppercase;
-	text-align: center;
-	font-weight: bold;
-	box-shadow: 0px 2px 2px rgb(0, 0, 0,0.2)
-}
-.navbar-brand img {
-	width:124px; 
-	height:50px;
-}
-.image_detail {
-	width:750px;
-	height:450px;
+  background: #ffffff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0px 2px 2px rgb(0, 0, 0,0.2)
 }
 .navbar-default .navbar-nav>li>a {
     color: #333;
@@ -39,7 +30,7 @@
   }
   .thumbnail strong{
     line-height: 35px;
-    color: #fc6600;
+    color: #fc6600 ;
   }
   .thumbnail a img{
     width: 250px;
@@ -80,8 +71,8 @@ h4{
   color:#fc6600 ;
 }
 h2{
-  color:#fc6600 ;
-  text-shadow: 2px 2px 2px #595650;
+  color:#fc6600;
+  text-shadow: 1px 2px 2px #595650;
 }
 h3{
   color:#fc6600 ;
@@ -90,7 +81,7 @@ h3{
   color: #ff9b00;
 }
 h5{
-    margin-left: 40px;
+      margin-left: 40px;
     text-decoration: none;
     color: orange;
     font-size: 16px;
@@ -100,8 +91,8 @@ h5{
   background: orange;
   height: 60px;
   border: 1px solid orange;
-  margin-top:10px; 
-  box-shadow: 2px 2px 2px ;
+ margin-top:10px; 
+ box-shadow: 2px 2px 2px ;
 }
 .form-inline{
   margin-top:10px; 
@@ -115,11 +106,11 @@ h5{
 }
 .Chitiet{
   padding: 140px 0;
-  background: #f3f3f3;
+  /* background: #f3f3f3; */
 }
 #checkTour{
   border: 1px solid #ffffff;
-  box-shadow: 2px 2px 2px;
+  box-shadow: 0px 0px 4px 2PX;
   background: #ffffff;
   height: 300px;
 }
@@ -133,17 +124,17 @@ h5{
   border-radius: 30px;
 }
 #details{
-  margin-top: 20px; 
+  margin-top: -21px;
   border: 1px solid #ffffff;
-  box-shadow: 2px 2px 2px;
+  box-shadow: 2px 2px 5px;
   background: #ffffff;
-  height: 300px;
 }
 #noidung{
-  font-size: 14px;
+  font-size: 16px;
   line-height: 30px;
   text-align: justify;
   padding: 0 0 0 12px;
+  margin-right: 10px;
 }
 .content{
   padding: 80px 0;
@@ -202,29 +193,158 @@ h5{
   animation-duration: 3s; 
 }
 @keyframes chitiet {
-  0% {
-    opacity: 0;
-    transform: translateY(70%);
-  } 
-  100% {
-    opacity: 1;
-    transform: translate(0%);
-    } 
+      0% {
+        opacity: 0;
+        transform: translateY(70%);
+      } 
+     100% {
+        opacity: 1;
+        transform: translate(0%);
+        } 
+      } 
+
+/* -------- -----------------------------------------------------------------------------------------------*/
+.service{
+  color: black;
+  font-size: 14px; 
+}
+.dv{
+    margin-left: 16px;
+    /* line-height: 64px; */
+}
+.nav-tabs li a {
+  color: #ff9b00;
+}
+.tab-content{
+  font-size: 16px; 
+
+}
+#quydinh{
+  margin-left: 18px;
+}
+.noidungquydinh{
+  line-height: 30px;
+    margin-top: 18px;
+
+}
+.noidungquydinh li{
+    margin-top: 16px;
+}
+.rating{
+  position: absolute;
+  display: flex;
+  margin-left: 19px;
+  /* margin-top: -9px; */
+  direction: rtl;
+}
+.rating input {
+  display: none;
+}
+.rating label{
+  display: block;
+  cursor: pointer;
+  width: 50px;
+  
+}
+.rating label:before{
+  content: '\f005' ;
+  font-family: FontAwesome;
+  font-size: 25px;
+  position: relative;
+  display: block;
+  color: #ccc; 
+}
+.rating label:after{
+  content: '\f005';
+  font-family: FontAwesome;
+  font-size: 25px;
+  position: absolute;
+  display: block;
+  color: yellow;
+  margin-top: -35px;
+  opacity: 0;
+  transition: .5s all;
+}
+.rating label:hover:after,
+.rating input:checked ~ label:after{
+  opacity: 1;
+}
+#review{
+  margin: 50px;
+}
+.travel{
+      margin-bottom: 50px;
+}
+#binhluan{
+margin-left: 420px;
+}
+.bl{
+  margin-left: 50px;
+}
+.ThongTin{
+      margin-top: 125px;
+}
+.tt{
+  list-style: none;
+}
+#navbarUser{
+  box-shadow: 2px 2px 2px;
+}
+
+#navbarUser .tt{
+     font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+#navbarUser .tt a{
+  color: #595650;
+      text-decoration: none;
+      line-height: 50px;
+}
+#infoUser{
+  margin: -20px 54px;
+
+}
+#infoUser h3{
+  font-family: sans-serif;
+    font-weight: bold;
+    
+    margin-bottom: 20px;
+}
+#infoUser ul {
+      list-style: none;
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: bold;
+}
+.info{
+      margin-left: 32px;
+}
+.dl-horizontal {
+      margin-left: 136px;
+    font-size: 16px;
+    line-height: 0px;
+}
+.dl-horizontal dt{
+  text-align:  left;
+}
+.dl-horizontal dd{
+ 
+    margin-bottom: 20px;
+}
+#infoUser a{
+    margin-left: 200px;
 }
 .login{
   margin-top:130px;   
 }
-#error_explanation {
-  color: red;
-  ul {
-    color: red;
-    margin: 0 0 30px 0;
-  }
+.navbar-brand img {
+  width:124px; 
+  height:50px;
 }
-
-.field_with_errors {
-  @extend .has-error;
-  .form-control {
-    color: $state-danger-text;
-  }
+#checkTour{
+  margin-bottom: 20px;
+}
+.text-center-detail{
+  margin: 41px 0 10px;
 }

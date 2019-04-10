@@ -1,0 +1,98 @@
+<!-- Chitiet -->
+<div class="Chitiet">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <img src="images/HoiAn.jpg" width="750" height="450" alt="">
+        <div id="details">
+            <div>
+                  <h2 class="text-center">Lịch Trình Tour</h2>
+                  <h2 class="text-center"><%= @tour.name %></h2>
+                  <p id="noidung">
+                    <%= @tour.content %>
+                  </p>
+            </div>
+            <div>
+                <div class="travel" >
+                    <h3 class="dv">Dịch Vụ Đi Kèm</h3>
+                    <div class="col-sm-3">
+                        <span class="glyphicon glyphicon-cutlery"><strong class="service"> Bữa Ăn</strong></span>
+                    </div>
+                    <div class="col-sm-3">
+                        <span class=" glyphicon glyphicon-bed"><strong class="service"> Xe Đưa Đón </strong></span>
+                    </div>
+                    <div class="col-sm-3">
+                        <span class=" glyphicon glyphicon-flag"><strong class="service"> Hướng Dẫn Viên</strong></span>
+                    </div>
+                    <div class="col-sm-3">
+                        <span class=" glyphicon glyphicon-modal-window"><strong class="service"> Vé Thăm Quan</strong></span>
+                    </div>
+                </div>
+                <div class="travel" >
+                     <h3 class="dv">Quy Định</h3>
+                     <div id="quydinh">
+                         <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#chuY">Chú Ý</a></li>
+                            <li><a data-toggle="tab" href="#huyTour">Hủy Tour</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="chuY" class="tab-pane fade in active">
+                                <ul class="noidungquydinh">
+                                    <li> Giá tour không áp dụng vào các dịp Lễ, Tết của Việt Nam & Bali.</li>
+                                    <li>Trong trường hợp quý khách không trực tiếp đến đăng ký vui lòng liên hệ tìm hiểu kỹ thông tin từ người đến đăng ký thế..</li>
+                                    <li>Ngày khởi hành có thể thay đổi tùy vào tình hình khách.</li>
+                                    <li>Quý khách từ 70 tuổi trở lên yêu cầu phải có giấy xác nhận đầy đủ sức khỏe để đi du lịch nước ngoài của Bác sĩ và phải có người thân dưới 60 tuổi (đầy đủ sức khỏe) đi theo.</li>
+                                    <li>Công ty du lịch  không nhận khách có thai từ 05 tháng trở lên tham gia các tour du lịch nước ngoài.</li>
+                                    <li>Trong trường hợp bất khả kháng do thời tiết, thiên tai, đình công, bạo động, phá hoại, chiến tranh, dịch bệnh, chuyến bay bị trì hoãn hay bị hủy do thời tiết hoặc do kỹ thuật…..dẫn đến tour không thể thực hiện tiếp tục được, Công ty du lịch  sẽ hoàn trả lại tiền tour cho quý khách sau khi đã trừ lại các chi phí dịch vụ đã thực hiện như phí làm visa,… và không chịu trách nhiệm bồi thường thêm bất kỳ chi phí nào khác.</li>
+                                </ul>
+                            </div>
+                            <div id="huyTour" class="tab-pane fade">
+                                <ul class="noidungquydinh">
+                                    <li>Nếu quý khách huỷ trước ngày khởi hành 35 ngày: chịu chi phí 50% chi phí tour</li>
+                                    <li> Nếu quý khách hủy trước ngày khởi hành 30 ngày: chịu phí 75% chi phí tour.</li>
+                                    <li>Nếu quý khách huỷ trước  ngày khởi hành 25 ngày, chịu chi phí: 100% chi phí tour.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="travel">
+                    <h3 class="dv">Đánh Giá Của Bạn*</h3>
+                    <div class="rating">
+                       <input type="radio" name="star" id="star1"><label for="star1"></label>
+                       <input type="radio" name="star" id="star2"><label for="star2"></label>
+                       <input type="radio" name="star" id="star3"><label for="star3"></label>
+                       <input type="radio" name="star" id="star4"><label for="star4"></label>
+                       <input type="radio" name="star" id="star5"><label for="star5"></label>
+                    </div>
+                    <div id="review">
+                      <button class="btn btn-warning" type="submit">Gửi Đánh Giá</button> 
+                    </div>
+                </div>
+                <div>
+                     <h3 class="dv"><span class=" glyphicon glyphicon-comment"></span> Bình Luận</h3>
+                     <div class="bl" >
+                       <textarea  id="comments" name="comments" placeholder="Viết bình luận của bạn..." rows="2" cols="70"></textarea><br/>
+                        <button id="binhluan" class="btn btn-warning" type="submit">Bình Luận</button> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+      </div>
+      <div  class="col-sm-4">
+        <% @descripption_details.each do |descripption_details| %>
+        <div id="checkTour" class="text-center">
+          <p class = "text-center-detail"><span class="glyphicon glyphicon-time "></span><strong> Thời Gian : </strong><%= (descripption_details.end_day.to_date - descripption_details.start_day.to_date).to_i %> Ngày </p>
+          <p><span class="glyphicon glyphicon-calendar"></span><strong> Khởi Hành</strong>
+            <%= l descripption_details.start_day, format: "%Y-%m-%d" %><strong> - Kết Thúc : 
+          </strong><%= l descripption_details.end_day, format: "%Y-%m-%d" %></p>
+          <p><span class="glyphicon glyphicon-earphone"></span><strong> Liên Hệ</strong>: 19001800</p> 
+          <h3><%= descripption_details.price %> USD</h3>  
+          <a id="bookTour" href="#">Đặt Tour</a>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
