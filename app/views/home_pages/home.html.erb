@@ -96,12 +96,13 @@
   						<%= image_tag 'NinhBinh2.jpg', class: '' %>
 						<% end %>
                         <p><strong > <%= tour_domestic.name %></strong></p>
-                        <a href="detail" class="xemTour btn">Xem Tour</a>
+                        <%= link_to 'Xem Tour', tour_domestic, class: 'xemTour btn'%>
                     </div>                     
                 </div>
                 <% end %>   
         </div>
-        <a class="views" href="domestic">Xem Thêm</a>
+        <%= link_to "Xem Thêm", tours_path(filter: "tours_domestic"), class: "views"%>
+       
         <div class="tourngoai">
             <h1>Tour Quốc tế</h1>
             <p>Việt Nam vẻ đẹp bất tận, điểm đến của mọi nhà!!!</p>            
@@ -112,11 +113,11 @@
                         <%= image_tag 'da-nang.jpg', class: '' %>
                         <% end %>
                         <p><strong > <%= tour_international.name %></strong></p>
-                        <a href="detail" class="xemTour btn">Xem Tour</a>
+                         <%= link_to 'Xem Tour', tour_international, class: 'xemTour btn'%>
                     </div>                     
                 </div>
                 <% end %>
-                <a class="views" href="international">Xem Thêm</a>  
+         <%= link_to "Xem Thêm", tours_path(filter: "tours_international"), class: "views"%>  
         </div>
     </div>
 </div>   
