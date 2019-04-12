@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get '404', to:'public#404'
   
   resources :tours
+  resources :users
 end

@@ -1,0 +1,34 @@
+<% provide(:title, "Thông Tin Tài Khoản")%>
+<div class="ThongTin">
+	<div class="container">
+		<div class="row">
+			<div id="navbarUser" class="col-sm-3">
+				<ul class="tt">
+					<li>
+                        <%= link_to(raw("<span class='glyphicon glyphicon-list-alt'> Thông Tin </span>"), current_user) %>
+                    </li>
+					<li>
+					<li>
+                        <%= link_to(raw("<span class='glyphicon glyphicon-send'> Danh Sách Tour </span>"), current_user) %>
+                     </li>
+					<li>
+				</ul>									
+			</div>
+			<div id="infoUser" class="col-sm-7 ">
+				<h3 class="text-center">Thông Tin Tài Khoản</h3>
+				<dl class="dl-horizontal dl-left text-center">
+					<dt>Họ và tên:</dt>
+					<dd><p><%= @user.name%></p></dd>
+					<dt>Email:</dt>
+					<dd><p><%= @user.email%></p></dd>
+					<dt>Phone:</dt>
+					<dd><p><%= @user.phone_number%></p></dd>
+					<dt>Địa Chỉ:</dt>
+					<dd><p><%= @user.address%></p></dd>
+				</dl>
+				 <a href="EditUser.html" class="btn btn-warning btn-lg" role="button">Sửa Thông Tin</a>
+			</div>
+		</div>
+	</div>
+</div>
+
