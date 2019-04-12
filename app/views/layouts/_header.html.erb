@@ -22,6 +22,9 @@
                         <ul class="dropdown-menu">
                             <% if logged_in? %>
                               <li>
+                                <%= link_to(raw("<span class='glyphicon glyphicon-list-alt'> Thông Tin Tài Khoản</span>"), current_user) %>
+                              </li>
+                              <li>
                                 <%= link_to(raw("<span class='glyphicon glyphicon-log-out'> Đăng Xuất</span>"), logout_path, method: :delete ) %>
                               </li>
                             <% else %>

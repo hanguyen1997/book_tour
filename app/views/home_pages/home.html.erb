@@ -89,17 +89,17 @@
         <div class="tourViet">
             <h1>Tour Trong Nước</h1>
             <p>Việt Nam vẻ đẹp bất tận, điểm đến của mọi nhà!!!</p>   
-                <% @tours_domestic.each do |tour_domestic| %>
-                <div class="col-sm-3 "> 
-                   <div class="thumbnail ">
-                        <%= link_to 'detail', class: 'images' do %>
-  						<%= image_tag 'NinhBinh2.jpg', class: '' %>
-						<% end %>
-                        <p><strong > <%= tour_domestic.name %></strong></p>
-                        <%= link_to 'Xem Tour', tour_domestic, class: 'xemTour btn'%>
+            <% @tours_domestic.each do |tour_domestic| %>
+            <div class="col-sm-3 "> 
+                <div class="thumbnail ">
+                    <%= link_to 'detail', class: 'images' do %>
+  					<%= image_tag 'NinhBinh2.jpg', class: '' %>
+					<% end %>
+                    <p><strong > <%= tour_domestic.name %></strong></p>
+                    <%= link_to 'Xem Tour', tour_domestic, class: 'xemTour btn'%>
                     </div>                     
-                </div>
-                <% end %>   
+            </div>
+            <% end %>   
         </div>
         <%= link_to "Xem Thêm", tours_path(filter: "tours_domestic"), class: "views"%>
        

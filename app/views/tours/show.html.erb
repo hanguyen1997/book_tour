@@ -1,9 +1,10 @@
+<% provide(:title, "Details")%>
 <!-- Chitiet -->
 <div class="Chitiet">
   <div class="container">
     <div class="row">
       <div class="col-sm-8">
-        <img src="images/HoiAn.jpg" width="750" height="450" alt="">
+        <%= image_tag 'HoiAn.jpg', class: 'image_details' %>
         <div id="details">
             <div>
                   <h2 class="text-center">Lịch Trình Tour</h2>
@@ -95,4 +96,39 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="container">
+    <div class="row text-center">
+        <% if @tour.category_id == 1%>
+      <h1>Tour Liên Quan</h1> 
+        <% @tours_domestic.each do |tour_domestic| %>
+        <div class="col-sm-3 "> 
+          <div class="thumbnail ">
+            <%= link_to 'detail', class: 'images' do %>
+            <%= image_tag 'NinhBinh2.jpg', class: '' %>
+            <% end %>
+            <p><strong > <%= tour_domestic.name %></strong></p>
+            <%= link_to 'Xem Tour', tour_domestic, class: 'xemTour btn'%>
+          </div>                     
+        </div>
+        <% end %>
+      <%= link_to "Xem Thêm", tours_path(filter: "tours_domestic"), class: "views"%>
+      <% else %>
+      <div class="tourViet">
+          <h1>Tour Liên Quan</h1>      
+          <% @tours_international.each do |tour_international| %>
+            <div class="col-sm-3 "> 
+              <div class="thumbnail ">
+              <%= link_to 'detail', class: 'images' do %>
+              <%= image_tag 'da-nang.jpg', class: '' %>
+              <% end %>
+              <p><strong > <%= tour_international.name %></strong></p>
+               <%= link_to 'Xem Tour', tour_international, class: 'xemTour btn'%>
+            </div>                     
+          </div>
+          <% end %> 
+          <%= link_to "Xem Thêm", tours_path(filter: "tours_international"), class: "views"%>                
+      </div>
+    <% end %>
 </div>

@@ -124,7 +124,7 @@ h5{
   border-radius: 30px;
 }
 #details{
-  margin-top: -21px;
+  margin-top: 30px;
   border: 1px solid #ffffff;
   box-shadow: 2px 2px 5px;
   background: #ffffff;
@@ -203,7 +203,28 @@ h5{
         } 
       } 
 
-/* -------- -----------------------------------------------------------------------------------------------*/
+/* -------- ---------------------------------form nguyen--------------------------------------------------------------*/
+.navbar-brand img {
+  width:124px; 
+  height:50px;
+}
+
+.login{
+  margin-top:130px;   
+}
+.image_details{
+  width: 750px;
+  height: 450px
+  margin-bottom: 30px;
+}
+
+#checkTour{
+  margin-bottom: 20px;
+}
+.text-center-detail{
+  margin: 41px 0 10px;
+}
+/*---------------------------------------------------------------------------------------------------------*/
 .service{
   color: black;
   font-size: 14px; 
@@ -288,22 +309,31 @@ margin-left: 420px;
   list-style: none;
 }
 #navbarUser{
-  box-shadow: 2px 2px 2px;
+  box-shadow: 1px 1px 2px 1px;
+  border-radius: 4px 4px 4px 4px;
 }
 
 #navbarUser .tt{
-     font-size: 20px;
-    font-weight: bold;
-    font-family: sans-serif;
+     font-size: 18px;
+     font-weight: bold;
+     font-family: sans-serif;
 }
 #navbarUser .tt a{
   color: #595650;
-      text-decoration: none;
-      line-height: 50px;
+  text-decoration: none;
+  line-height: 48px;
 }
 #infoUser{
-  margin: -20px 54px;
-
+ box-shadow: 1px 2px 2px 2px;
+  margin: -2px 97px;
+  border-radius: 4px 4px 4px 4px;
+  height: 380px;
+}
+#infoUser2{
+ box-shadow: 1px 2px 2px 2px;
+  margin: -2px 97px;
+  border-radius: 4px 4px 4px 4px;
+  height: 560px;
 }
 #infoUser h3{
   font-family: sans-serif;
@@ -322,6 +352,7 @@ margin-left: 420px;
 }
 .dl-horizontal {
       margin-left: 136px;
+      margin-top: 30px;
     font-size: 16px;
     line-height: 0px;
 }
@@ -330,21 +361,37 @@ margin-left: 420px;
 }
 .dl-horizontal dd{
  
+        margin-right: 120px;
     margin-bottom: 20px;
 }
 #infoUser a{
-    margin-left: 200px;
+        margin-left: 226px;
 }
-.login{
-  margin-top:130px;   
+#infoUser{
+   animation-name: infoUser;
+  animation-duration: 3.5s; 
 }
-.navbar-brand img {
-  width:124px; 
-  height:50px;
+@keyframes infoUser {
+      0% {
+        opacity: 0;
+        transform: translateX(30%);
+      } 
+     100% {
+        opacity: 1;
+        transform: translateX(0%);
+        } 
+      } 
+#infoUser2{
+   animation-name: infoUser;
+  animation-duration: 3.5s; 
 }
-#checkTour{
-  margin-bottom: 20px;
-}
-.text-center-detail{
-  margin: 41px 0 10px;
-}
+@keyframes infoUser {
+      0% {
+        opacity: 0;
+        transform: translateX(30%);
+      } 
+     100% {
+        opacity: 1;
+        transform: translateX(0%);
+        } 
+      }       
