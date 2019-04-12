@@ -228,3 +228,174 @@ h5{
     color: $state-danger-text;
   }
 }
+/*-------------------------------*/
+.service{
+  color: black;
+  font-size: 14px; 
+}
+.dv{
+    margin-left: 16px;
+    /* line-height: 64px; */
+}
+.nav-tabs li a {
+  color: #ff9b00;
+}
+.tab-content{
+  font-size: 16px; 
+
+}
+#quydinh{
+  margin-left: 18px;
+}
+.noidungquydinh{
+  line-height: 30px;
+    margin-top: 18px;
+
+}
+.noidungquydinh li{
+    margin-top: 16px;
+}
+.rating{
+  position: absolute;
+  display: flex;
+  margin-left: 19px;
+  /* margin-top: -9px; */
+  direction: rtl;
+}
+.rating input {
+  display: none;
+}
+.rating label{
+  display: block;
+  cursor: pointer;
+  width: 50px;
+  
+}
+.rating label:before{
+  content: '\f005' ;
+  font-family: FontAwesome;
+  font-size: 25px;
+  position: relative;
+  display: block;
+  color: #ccc; 
+}
+.rating label:after{
+  content: '\f005';
+  font-family: FontAwesome;
+  font-size: 25px;
+  position: absolute;
+  display: block;
+  color: yellow;
+  margin-top: -35px;
+  opacity: 0;
+  transition: .5s all;
+}
+.rating label:hover:after,
+.rating input:checked ~ label:after{
+  opacity: 1;
+}
+#review{
+  margin: 50px;
+}
+.travel{
+      margin-bottom: 50px;
+}
+#binhluan{
+margin-left: 420px;
+}
+.bl{
+  margin-left: 50px;
+}
+.ThongTin{
+      margin-top: 125px;
+}
+.tt{
+  list-style: none;
+}
+#navbarUser{
+  box-shadow: 1px 1px 2px 1px;
+  border-radius: 4px 4px 4px 4px;
+}
+
+#navbarUser .tt{
+     font-size: 18px;
+     font-weight: bold;
+     font-family: sans-serif;
+}
+#navbarUser .tt a{
+  color: #595650;
+  text-decoration: none;
+  line-height: 48px;
+}
+#infoUser{
+ box-shadow: 1px 2px 2px 2px;
+  margin: -2px 97px;
+  border-radius: 4px 4px 4px 4px;
+  height: 380px;
+}
+#infoUser2{
+ box-shadow: 1px 2px 2px 2px;
+  margin: -2px 97px;
+  border-radius: 4px 4px 4px 4px;
+  height: 560px;
+}
+#infoUser h3{
+  font-family: sans-serif;
+    font-weight: bold;
+    
+    margin-bottom: 20px;
+}
+#infoUser ul {
+      list-style: none;
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: bold;
+}
+.info{
+      margin-left: 32px;
+}
+.dl-horizontal {
+      margin-left: 136px;
+      margin-top: 30px;
+    font-size: 16px;
+    line-height: 0px;
+}
+.dl-horizontal dt{
+  text-align:  left;
+}
+.dl-horizontal dd{
+ 
+        margin-right: 120px;
+    margin-bottom: 20px;
+}
+#infoUser a{
+        margin-left: 226px;
+}
+#infoUser{
+   animation-name: infoUser;
+  animation-duration: 3.5s; 
+}
+@keyframes infoUser {
+      0% {
+        opacity: 0;
+        transform: translateX(30%);
+      } 
+     100% {
+        opacity: 1;
+        transform: translateX(0%);
+        } 
+      } 
+#infoUser2{
+   animation-name: infoUser;
+  animation-duration: 3.5s; 
+}
+@keyframes infoUser {
+      0% {
+        opacity: 0;
+        transform: translateX(30%);
+      } 
+     100% {
+        opacity: 1;
+        transform: translateX(0%);
+        } 
+      }       

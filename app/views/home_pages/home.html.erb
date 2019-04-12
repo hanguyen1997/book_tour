@@ -101,7 +101,7 @@
                 </div>
                 <% end %>   
         </div>
-        <a class="views" href="domestic">Xem Thêm</a>
+        <%= link_to "Xem Thêm", tours_path(filter: "tours_domestic")%>
         <div class="tourngoai">
             <h1>Tour Quốc tế</h1>
             <p>Việt Nam vẻ đẹp bất tận, điểm đến của mọi nhà!!!</p>            
@@ -116,7 +116,7 @@
                     </div>                     
                 </div>
                 <% end %>
-                <a class="views" href="international">Xem Thêm</a>  
+                <%= link_to 'Xem Thêm', tours_path(filter: 'tours_international')%>
         </div>
     </div>
 </div>   
