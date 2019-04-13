@@ -224,6 +224,9 @@ h5{
 .text-center-detail{
   margin: 41px 0 10px;
 }
+.pagination{
+  padding-left: 308px;
+}
 /*---------------------------------------------------------------------------------------------------------*/
 .service{
   color: black;

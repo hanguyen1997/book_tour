@@ -1,0 +1,48 @@
+<% provide(:title, "Thông Tin Tour Da dat")%>
+<div class="ThongTin">
+	<div class="container">
+		<div class="row">
+			<div id="navbarUser" class="col-sm-3">
+				<ul class="tt">
+          <li>
+            <%= link_to(raw("<span class='glyphicon glyphicon-list-alt'> Thông Tin </span>"), current_user) %></li>
+          <li>
+          <li>
+            <%= link_to(raw("<span class='glyphicon glyphicon-send'> Danh Sách Tour </span>"), new_booking_path) %></li>
+          <li>
+        </ul> 								
+			</div>
+		<div id="infoUser" class="col-sm-7 ">
+			<h3 class="text-center">Danh Sách Tour</h3>
+    
+		<table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Mã Tour</th>
+          <th>Điểm Đến</th>
+          <th>Ngày Bắt Đầu</th>
+          <th>Ngày Kết Thúc</th>
+          <th>Giá Tour</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <% @bookings.each do |booking| %>
+          <tr>
+            <td><%= booking.id %></td>
+            <td><%= booking.description_detail.tour.name %></td>
+            <td><%= l booking.description_detail.start_day, format: "%d-%m-%y" %></td>
+            <td><%= l booking.description_detail.end_day, format: "%d-%m-%y"  %></td>
+            <td><%= booking.description_detail.price%> USD  </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+   
+		</div>
+    <%= will_paginate @bookings %>
+	</div>
+</div>
+
+
+    
