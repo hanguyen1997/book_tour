@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
+  get "/history", to: "histories#index"
   get '404', to:'public#404'
   
   resources :tours
   resources :users
+  resources :bookings
 end

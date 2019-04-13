@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :bookings
+
   has_secure_password
   before_save { self.email = email.downcase }
   validates :name,  presence: true, length: { maximum: 50 }
