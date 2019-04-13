@@ -15,6 +15,7 @@
 			<div id="infoUser2" class="col-sm-7">
 				<h3 class="text-center">Thông Tin Tài Khoảng</h3>
           <%= form_for(@user) do |f| %>
+            <%= render 'shared/error_messages' %>
             <div class="form-group">
 				      <%= f.label :name, class: "glyphicon glyphicon-user" %>
               <%= f.text_field :name, class: 'form-control' %>
