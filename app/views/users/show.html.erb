@@ -26,7 +26,7 @@
 					<dt>Địa Chỉ:</dt>
 					<dd><p><%= @user.address%></p></dd>
 				</dl>
-				 <a href="EditUser.html" class="btn btn-warning btn-lg" role="button">Sửa Thông Tin</a>
+				<%= link_to(raw("<span class='btn btn-warning btn-lg'> Sửa Thông Tin </span>"), edit_user_path(current_user)) %>
 			</div>
 		</div>
 	</div>
