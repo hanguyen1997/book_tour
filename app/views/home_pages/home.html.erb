@@ -92,7 +92,7 @@
             <% @tours_domestic.each do |tour_domestic| %>
             <div class="col-sm-3 "> 
                 <div class="thumbnail ">
-                    <%= link_to 'detail', class: 'images' do %>
+                    <%= link_to tour_domestic, class: 'images' do %>
   					<%= image_tag 'NinhBinh2.jpg', class: '' %>
 					<% end %>
                     <p><strong > <%= tour_domestic.name %></strong></p>
@@ -109,7 +109,7 @@
                  <% @tours_international.each do |tour_international| %>
                 <div class="col-sm-3 "> 
                    <div class="thumbnail ">
-                        <%= link_to 'detail', class: 'images' do %>
+                        <%= link_to tour_international, class: 'images' do %>
                         <%= image_tag 'da-nang.jpg', class: '' %>
                         <% end %>
                         <p><strong > <%= tour_international.name %></strong></p>
