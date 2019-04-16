@@ -1,0 +1,78 @@
+<% provide(:title, "xac nhan thong tin tour")%>
+<div class="pay">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-sm-4">
+                 <%=image_tag("icon_thongtin.png") %>
+                <div class="title">Thông Tin</div>
+            </div>
+            <div class="col-sm-4">
+                <%=image_tag("checked.png") %>
+                <div class="title">Xác Nhận</div>
+            </div>
+            <div class="col-sm-4">
+                <%=image_tag("icon_thanhtoan.png") %>
+                <div class="title">Thanh Toán</div>
+            </div>
+        </div>
+        <div class="row text-center" id="pay-process">
+            <div id="process">
+                <div class="col-sm-4">
+                    <div class="processly">
+                        <div class="process-bar"><span class="glyphicon glyphicon-ok"></span></div>
+                    </div>
+                </div>       
+                <div class="col-sm-4">
+                    <div class="processly">
+                        <div class="process-bar"><span class="glyphicon glyphicon-ok"></span></div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="processly">
+                        
+                    </div>
+                </div>
+            </div>           
+        </div>
+    </div>
+</div>
+
+<div class="thanhtoan">
+    <div class="container">
+        <div>
+            <div class="row ">
+                <div class="col-sm-12 thanks text-center" >Xác Nhận Thanh Toán Tour</div>
+                <div class="col-sm-12">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Tên Tour</th>
+                            <th>Ngày Khởi Hành</th>
+                            <th>Ngày Kết Thúc</th>
+                            <th>Giá Tour</th>
+                            <th>Số Khách Đi Tour</th>
+                            <th>Tổng Thanh Toán</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="warning">
+                            <td>Đà Nẵng - Hà Nội - Ninh Bình</td>
+                            <td>14/02/2019</td>
+                            <td>15/02/2019</td>
+                            <td>3000000 VNĐ</td>
+                            <td>2</td>
+                            <td>6000000</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-sm-12 text-center">
+                     <%= link_to 'Thanh Toán', bookings_path, class: 'btn btn-warning'%> 
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    </div>
+</div>
+    

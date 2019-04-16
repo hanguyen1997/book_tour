@@ -89,8 +89,8 @@
             <%= l descripption_details.start_day, format: "%Y-%m-%d" %><strong> - Kết Thúc : 
           </strong><%= l descripption_details.end_day, format: "%Y-%m-%d" %></p>
           <p><span class="glyphicon glyphicon-earphone"></span><strong> Liên Hệ</strong>: 19001800</p> 
-          <h3><%= descripption_details.price %> USD</h3>  
-          <a id="bookTour" href="#">Đặt Tour</a>
+          <h3><%= descripption_details.price %> USD</h3> 
+          <%= link_to 'Đặt Tour', new_booking_path, id: 'bookTour'%> 
         </div>
         <% end %>
       </div>
