@@ -389,12 +389,89 @@ margin-left: 420px;
   animation-duration: 3.5s; 
 }
 @keyframes infoUser {
-      0% {
-        opacity: 0;
-        transform: translateX(30%);
-      } 
-     100% {
-        opacity: 1;
-        transform: translateX(0%);
-        } 
-      }       
+  0% {
+    opacity: 0;
+    transform: translateX(30%);
+  } 
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  } 
+}
+/* Thanh Toán */    
+
+.pay{
+  padding-top:120px; 
+}
+.title{
+    color: #ffb900;
+    text-shadow: 1px 1px rgb(234, 173, 2);
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+#pay-process{
+      margin-top: 30px;
+}
+#process{
+    background: #e2e0e1;
+    height: 3px; 
+}
+.processly{
+  border-radius: 0;
+  box-shadow: none;
+  margin: 20px 0;
+  position: relative;
+}
+.process-bar{
+  background-color: #f57921;
+  font-size: 16px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 45%;
+  top: -40px;
+  text-align: center;
+  border: 3px solid #e2e0e1;
+  border-radius: 20px;
+}
+.process-bar .glyphicon{
+  color: #fff;
+  padding: 8px;
+}
+.thanks{
+  font-size: 36px;
+  text-transform: uppercase;
+  color: #f57921;
+}
+.thongtinthanhtoan{
+  margin: 35px;
+}
+.thanhtoan{
+    padding: 40px;
+    line-height: 50px;
+}
+.thanhtoan p {
+  font-size: 15px;
+}
+.row .infoThanhToan {
+  border-top: 1px solid #ccc;
+  font-size: 15px;
+
+}
+#noidungtttt{
+  border: 1px solid #ccc ;
+  height: 300px;
+  box-shadow: 1px 1px 2px 1px;
+}
+.col-sm-12{
+  line-height: 45px;
+}
+input{
+  height: 36px;
+}
+#btn-xacnhan{
+      padding: 10px 70px;
+      margin-top: 12px;
+}       

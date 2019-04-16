@@ -1,0 +1,65 @@
+<% provide(:title, "thong tin tour")%>
+<div class="pay">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-sm-4">
+                 <%=image_tag("icon_thongtin.png") %>
+                <div class="title">Thông Tin</div>
+            </div>
+            <div class="col-sm-4">
+            	<%=image_tag("checked.png") %>
+                <div class="title">Xác Nhận</div>
+            </div>
+            <div class="col-sm-4">
+            	<%=image_tag("icon_thanhtoan.png") %>
+                <div class="title">Thanh Toán</div>
+            </div>
+        </div>
+        <div class="row text-center" id="pay-process">
+            <div id="process">
+                <div class="col-sm-4">
+                    <div class="processly">
+                        <div class="process-bar"><span class="glyphicon glyphicon-ok"></span></div>
+                    </div>
+                </div>       
+                <div class="col-sm-4"><div class="process"></div></div>
+                <div class="col-sm-4"><div class="process"> </div></div>   
+            </div>           
+        </div>
+    </div>
+</div>
+<div class="thongtinthanhtoan">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-5">
+				 <%=image_tag 'thailand.jpg', class: 'img-responsive' %>
+			</div>
+			<div >
+				<div class="col-sm-7" id="noidungtttt">
+					<div class="row">
+						<div class="col-sm-12 text-center"><h2>Đà Nẵng -Hà Nội - Ninh Bình</h2></div>
+					</div>				
+					<div class="row infoThanhToan ">
+						<div class="col-sm-12">
+							<div class="col-sm-6"><span class="glyphicon glyphicon-calendar"></span> Ngày Khởi Hành: <strong> 14/02/2019</strong></div>
+							<div class="col-sm-6"><span class="glyphicon glyphicon-calendar"></span> Ngày Kết Thúc: <strong> 20/02/2019</strong> </div>
+						</div>
+						<div class="col-sm-12">
+							<div class="col-sm-6"><span class="glyphicon glyphicon-usd"></span> Giá Tour: <strong>3000000 VNĐ</strong></div>
+							<div class="col-sm-6"><span class="glyphicon glyphicon-th"></span> Số Chỗ Còn Nhận: <strong>10</strong> </div>
+						</div>
+						<div class="col-sm-12">
+							<div class="col-sm-6"><span class="glyphicon glyphicon-transfer"></span> Số Khách Đi Tour: </div>
+							<div class="col-sm-6"><input type="number" name="" placeholder=""></div>
+						</div>
+						<div class="col-sm-12 text-center">
+							<%= link_to 'Xác Nhận', bookings_path, id:'btn-xacnhan', class: 'btn btn-warning'%> 
+						</div>
+						
+					</div>
+			</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
