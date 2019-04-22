@@ -1,4 +1,4 @@
-module SessionsHelper
+  module SessionsHelper
 
   # Logs in the given user.
   def log_in(user)
@@ -14,6 +14,10 @@ module SessionsHelper
   
   def logged_in?
     !current_user.nil?
+  end
+
+  def logged_in_as_admin?
+    logged_in? && @current_user.admin?
   end
 
   def log_out

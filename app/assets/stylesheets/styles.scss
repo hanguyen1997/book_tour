@@ -1,0 +1,477 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+#header nav{
+  background: #ffffff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #333;
+}
+ .carousel-inner img {
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h1 {
+    font-size: 50px;
+    margin-bottom:270px; 
+    font-style: italic;
+  }
+  .thumbnail{
+  padding: 0 0 15px 0;
+  border: none;
+  border-radius: 0;
+  background: #fcf9f9;
+
+  }
+  .thumbnail strong{
+    line-height: 35px;
+    color: #fc6600 ;
+  }
+  .thumbnail a img{
+    width: 250px;
+    height: 150px;
+    transition: transform 1s;
+  }
+
+  .thumbnail img:hover{
+    transform: scale(1.1);
+    
+  }
+  .views{
+  border: 1px solid #fc6600 ;
+  color: white;
+  background: #fc6600 ;
+  font-weight: bold;
+  }
+ .tour{
+   margin-top: 100px;
+ }
+.jumbotron{
+  padding: 118px 0;
+  background: url('tour.png') center no-repeat;
+  background-size: cover; 
+}
+.contact{
+  background-color:#f3f3f3;
+}
+.icon li{
+ list-style: none;
+ display: inline;
+ margin-left:4px;
+}
+h1{
+text-shadow: 2px 2px 2px #595650;
+}
+h4{
+  color:#fc6600 ;
+}
+h2{
+  color:#fc6600;
+  text-shadow: 1px 2px 2px #595650;
+}
+h3{
+  color:#fc6600 ;
+}
+.glyphicon{
+  color: #ff9b00;
+}
+h5{
+      margin-left: 40px;
+    text-decoration: none;
+    color: orange;
+    font-size: 16px;
+}
+
+.search .container {
+  background: orange;
+  height: 60px;
+  border: 1px solid orange;
+ margin-top:10px; 
+ box-shadow: 2px 2px 2px ;
+}
+.form-inline{
+  margin-top:10px; 
+}
+.xemTour{
+    box-shadow: 2px 2px 2px ;
+    border: 1px solid #fc6600 ;
+    color: white;
+    background: #fc6600 ;
+    font-weight: bold;
+}
+.Chitiet{
+  padding: 140px 0;
+  /* background: #f3f3f3; */
+}
+#checkTour{
+  border: 1px solid #ffffff;
+  box-shadow: 0px 0px 4px 2PX;
+  background: #ffffff;
+  height: 300px;
+}
+#bookTour{
+  text-decoration: none;
+  color: white;
+  border: 1px solid #ff9b00;
+  background: #ff9b00;
+  font-size: 30px;
+  padding: 6px 40px;
+  border-radius: 30px;
+}
+#details{
+  margin-top: 30px;
+  border: 1px solid #ffffff;
+  box-shadow: 2px 2px 5px;
+  background: #ffffff;
+}
+#noidung{
+  font-size: 16px;
+  line-height: 30px;
+  text-align: justify;
+  padding: 0 0 0 12px;
+  margin-right: 10px;
+}
+.content{
+  padding: 80px 0;
+}
+.modal-header {
+    background-color: #ff9b00;
+    color:white !important;
+    text-align: center;
+    font-size: 30px;
+  }
+.col-sm-3{
+   animation-name: col;
+  animation-duration: 3.5s; 
+}
+@keyframes col {
+      0% {
+        opacity: 0;
+        transform: translateY(30%);
+      } 
+     100% {
+        opacity: 1;
+        transform: translateY(0%);
+        } 
+      } 
+
+.slider{
+  animation-name: silder;
+  animation-duration: 2s; 
+}
+@keyframes silder {
+      0% {
+        opacity: 0;
+        transform: translateX(70%);
+      } 
+     100% {
+        opacity: 1;
+        transform: translate(0%);
+        } 
+      } 
+.col-sm-4{
+   animation-name: booktour;
+  animation-duration: 3.5s; 
+}
+@keyframes booktour {
+      0% {
+        opacity: 0;
+        transform: translateX(30%);
+      } 
+     100% {
+        opacity: 1;
+        transform: translateX(0%);
+        } 
+      } 
+.col-sm-8{
+  animation-name: chitiet;
+  animation-duration: 3s; 
+}
+@keyframes chitiet {
+      0% {
+        opacity: 0;
+        transform: translateY(70%);
+      } 
+     100% {
+        opacity: 1;
+        transform: translate(0%);
+        } 
+      } 
+
+/* -------- ---------------------------------form nguyen--------------------------------------------------------------*/
+.navbar-brand img {
+  width:124px; 
+  height:50px;
+}
+
+.login{
+  margin-top:130px;   
+}
+.image_details{
+  width: 750px;
+  height: 450px;
+  margin-bottom: 30px;
+}
+
+#checkTour{
+  margin-bottom: 20px;
+}
+.text-center-detail{
+  margin: 41px 0 10px;
+}
+.pagination{
+  padding-left: 308px;
+}
+/*---------------------------------------------------------------------------------------------------------*/
+.service{
+  color: black;
+  font-size: 14px; 
+}
+.dv{
+    margin-left: 16px;
+    /* line-height: 64px; */
+}
+.nav-tabs li a {
+  color: #ff9b00;
+}
+.tab-content{
+  font-size: 16px; 
+
+}
+#quydinh{
+  margin-left: 18px;
+}
+.noidungquydinh{
+  line-height: 30px;
+    margin-top: 18px;
+
+}
+.noidungquydinh li{
+    margin-top: 16px;
+}
+.rating{
+  position: absolute;
+  display: flex;
+  margin-left: 19px;
+  /* margin-top: -9px; */
+  direction: rtl;
+}
+.rating input {
+  display: none;
+}
+.rating label{
+  display: block;
+  cursor: pointer;
+  width: 50px;
+  
+}
+.rating label:before{
+  content: '\f005' ;
+  font-family: FontAwesome;
+  font-size: 25px;
+  position: relative;
+  display: block;
+  color: #ccc; 
+}
+.rating label:after{
+  content: '\f005';
+  font-family: FontAwesome;
+  font-size: 25px;
+  position: absolute;
+  display: block;
+  color: yellow;
+  margin-top: -35px;
+  opacity: 0;
+  transition: .5s all;
+}
+.rating label:hover:after,
+.rating input:checked ~ label:after{
+  opacity: 1;
+}
+#review{
+  margin: 50px;
+}
+.travel{
+      margin-bottom: 50px;
+}
+#binhluan{
+margin-left: 420px;
+}
+.bl{
+  margin-left: 50px;
+}
+.ThongTin{
+      margin-top: 125px;
+}
+.tt{
+  list-style: none;
+}
+#navbarUser{
+  box-shadow: 1px 1px 2px 1px;
+  border-radius: 4px 4px 4px 4px;
+}
+
+#navbarUser .tt{
+     font-size: 18px;
+     font-weight: bold;
+     font-family: sans-serif;
+}
+#navbarUser .tt a{
+  color: #595650;
+  text-decoration: none;
+  line-height: 48px;
+}
+#infoUser{
+ box-shadow: 1px 2px 2px 2px;
+  margin: -2px 97px;
+  border-radius: 4px 4px 4px 4px;
+  height: 380px;
+}
+#infoUser2{
+ box-shadow: 1px 2px 2px 2px;
+  margin: -2px 97px;
+  border-radius: 4px 4px 4px 4px;
+  height: 560px;
+}
+#infoUser h3{
+  font-family: sans-serif;
+    font-weight: bold;
+    
+    margin-bottom: 20px;
+}
+#infoUser ul {
+      list-style: none;
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: bold;
+}
+.info{
+      margin-left: 32px;
+}
+.dl-horizontal {
+      margin-left: 136px;
+      margin-top: 30px;
+    font-size: 16px;
+    line-height: 0px;
+}
+.dl-horizontal dt{
+  text-align:  left;
+}
+.dl-horizontal dd{
+ 
+        margin-right: 120px;
+    margin-bottom: 20px;
+}
+#infoUser a{
+        margin-left: 226px;
+}
+#infoUser{
+   animation-name: infoUser;
+  animation-duration: 3.5s; 
+}
+@keyframes infoUser {
+      0% {
+        opacity: 0;
+        transform: translateX(30%);
+      } 
+     100% {
+        opacity: 1;
+        transform: translateX(0%);
+        } 
+      } 
+#infoUser2{
+   animation-name: infoUser;
+  animation-duration: 3.5s; 
+}
+@keyframes infoUser {
+  0% {
+    opacity: 0;
+    transform: translateX(30%);
+  } 
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  } 
+}
+/* Thanh Toán */    
+
+.pay{
+  padding-top:120px; 
+}
+.title{
+    color: #ffb900;
+    text-shadow: 1px 1px rgb(234, 173, 2);
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+#pay-process{
+      margin-top: 30px;
+}
+#process{
+    background: #e2e0e1;
+    height: 3px; 
+}
+.processly{
+  border-radius: 0;
+  box-shadow: none;
+  margin: 20px 0;
+  position: relative;
+}
+.process-bar{
+  background-color: #f57921;
+  font-size: 16px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 45%;
+  top: -40px;
+  text-align: center;
+  border: 3px solid #e2e0e1;
+  border-radius: 20px;
+}
+.process-bar .glyphicon{
+  color: #fff;
+  padding: 8px;
+}
+.thanks{
+  font-size: 36px;
+  text-transform: uppercase;
+  color: #f57921;
+}
+.thongtinthanhtoan{
+  margin: 35px;
+}
+.thanhtoan{
+    padding: 40px;
+    line-height: 50px;
+}
+.thanhtoan p {
+  font-size: 15px;
+}
+.row .infoThanhToan {
+  border-top: 1px solid #ccc;
+  font-size: 15px;
+
+}
+#noidungtttt{
+  border: 1px solid #ccc ;
+  height: 300px;
+  box-shadow: 1px 1px 2px 1px;
+}
+.col-sm-12{
+  line-height: 45px;
+}
+input{
+  height: 36px;
+}
+#btn-xacnhan{
+      padding: 10px 70px;
+      margin-top: 12px;
+}   
+    

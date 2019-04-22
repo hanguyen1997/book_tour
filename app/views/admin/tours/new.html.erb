@@ -1,0 +1,56 @@
+<% provide(:title, "them tour")%>
+<div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">Thêm Tour</h4>
+                </div>
+                <div class="card-body">
+                  <form>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Tên Tour</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Tên Loại Tour</label>
+                          <select class="form-control" >
+                              <option>Tour Trong Nước</option>
+                              <option>Tour Nước Ngoài</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <label for="exampleInputFile">Hình Ảnh</label>
+                        <input type="file" class="form-control-file" id="exampleInputFile" >                                            
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label for="comment">Nội Dung:</label>
+                          <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-5"></div>
+                      <div class="col-md-4">
+                        <button type="submit" class="btn btn-primary text-center">Thêm Mới</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>   
