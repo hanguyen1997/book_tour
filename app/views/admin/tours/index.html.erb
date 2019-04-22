@@ -1,0 +1,48 @@
+<% provide(:title, "quan ly danh muc")%>
+<div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <%= link_to "Thêm mới", new_admin_tour_path, class: "btn btn-warning" %>
+              <div class="card">
+                <div class="card-header card-header-primary" >
+                  <h4 class="card-title ">Tour Trong Nước</h4>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead class=" text-primary text-center">
+                        <th>ID</th>
+                        <th>Tên Loại Tour</th>
+                        <th>Tên Tour</th>
+                        <th>Hình Ảnh</th>
+                        <th class="ct" >Nội Dung</th>
+                        <th>Chức Năng</th>
+                      </thead>
+                      <tbody>
+                        <tr class="text-center">
+                          <td>1</td>
+                          <td>Tour Trong Nước</td>
+                          <td>Hà Nội - Ninh Bình</td>
+                          <td><img src="images/hue.jpg" height="90px" width="150px" alt=""></td>
+                          <td class="ct" id="nd">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.           
+                          </td>
+                          <td>
+                            <a href="" title=""><img src="images/edit (1).png" alt=""> Sửa</a>
+                            <a href="" title=""><img src="images/delete-button.png" alt="">Xóa</a>
+                          </td>
+                        </tr>                                                                          
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+            </div>
+        </div>
+  </div>
+</div>

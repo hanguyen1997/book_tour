@@ -1,0 +1,45 @@
+<% provide(:title, "quan ly thong tin nguoi dung")%>
+ <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+            		<%= link_to "Thêm mới", new_admin_user_path, class: "btn btn-warning" %>
+              <div class="card">
+                <div class="card-header card-header-primary" >
+                  <h4 class="card-title ">Thông Tin Người Dùng</h4>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead class=" text-primary text-center">
+                        <th>ID</th>
+                        <th>Họ Tên</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Địa Chỉ</th>
+                        <th>Phone</th>
+                        <th>Cấp Bậc</th>
+                        <th>Chức Năng</th>
+                      </thead>
+                      <tbody>
+                        <tr class="text-center">
+                          <td>1</td>
+                          <td>Nguyễn Văn Dũng</td>
+                          <td>vandungcode@gmail.com</td>
+                          <td>123123</td>
+                          <td>Đà Nẵng</td>
+                           <td>0929588983</td>
+                            <td>Admin</td>
+                          <td><a href="" title=""><img src="images/edit (1).png" alt=""> Sửa</a>
+                            <a href="" title=""><img src="images/delete-button.png" alt="">Xóa</a>
+                          </td>
+                        </tr>                                                                          
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+    </div>
+  </div>

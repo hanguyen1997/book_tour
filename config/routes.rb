@@ -10,4 +10,12 @@ Rails.application.routes.draw do
   resources :tours
   resources :users
   resources :bookings
+
+  namespace :admin do
+    root "dashboard#index"
+    resources :categories
+    resources :users
+    resources :tours
+    resources :comments
+  end
 end
