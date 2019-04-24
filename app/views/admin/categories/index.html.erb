@@ -17,22 +17,16 @@
                         <th>Chức Năng</th>
                       </thead>
                       <tbody>
-                        <tr class="text-center">
-                          <td>1</td>
-                          <td>Tour Trong Nước</td>
-                          <td>
-                            <a href="" title=""><img src="images/edit (1).png" alt=""> Sửa</a>
-                            <a href="" title=""><img src="images/delete-button.png" alt="">Xóa</a>
-                          </td>
-                        </tr>     
-                        <tr class="text-center">
-                          <td>2</td>
-                          <td>Tour Nước Ngoài</td>
-                          <td>
-                            <a href="" title=""><img src="images/edit (1).png" alt=""> Sửa</a>
-                            <a href="" title=""><img src="images/delete-button.png" alt="">Xóa</a>
-                          </td>
-                        </tr>                                                                         
+                        <% @admin_categories.each do |admin_categorie | %>
+                          <tr class="text-center">
+                            <td><%= admin_categorie.id %></td>
+                            <td><%= admin_categorie.name %></td>
+                            <td>
+                              <a href="" title=""><img src="images/edit (1).png" alt=""> Sửa</a>
+                              <a href="" title=""><img src="images/delete-button.png" alt="">Xóa</a>
+                            </td>
+                          </tr>
+                        <% end %>     
                       </tbody>
                     </table>
                   </div>

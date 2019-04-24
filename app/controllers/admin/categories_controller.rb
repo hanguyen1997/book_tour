@@ -1,8 +1,9 @@
 module Admin
 	class CategoriesController < BaseController
 		def index
-  		end
-
+			 @admin_categories = Category.all
+		end
+		 		 
   		def new
   		end
 	end
