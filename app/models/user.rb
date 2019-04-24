@@ -10,5 +10,5 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
-  enum role: {admin: 1, customer: 0}
+  enum role: {admin: 1, customer: 0, staff: 2}
 end
