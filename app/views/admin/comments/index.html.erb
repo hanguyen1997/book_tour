@@ -18,27 +18,25 @@
                   <th>Chức Năng</th>
                 </thead>
                 <tbody>
+                  <% @admin_comments.each do |admin_comment| %>
                   <tr class="text-center">
-                    <td>1</td>
-                    <td>Hà Nội - Ninh Bình</td>
+                    <td><%= admin_comment.id %></td>
+                    <td><%= admin_comment.review.tour.name %>  </td>
                     <td></td>
                     <td class="ct" id="nd">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                               consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                               cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                               proident, sunt in culpa qui officia deserunt mollit anim id est laborum.           
+                    <%= admin_comment.content %>        
                     </td>
                     <td>
                       
                       <a href="" title=""><img src="images/delete-button.png" alt="">Xóa</a>
                     </td>
-                  </tr>                                                                          
+                  </tr> 
+                  <% end %>                                                                         
                 </tbody>
               </table>
             </div>
           </div>
+           <%= will_paginate @admin_comments %>
         </div>
         
       </div>
