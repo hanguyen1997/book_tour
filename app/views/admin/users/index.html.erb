@@ -15,27 +15,34 @@
                         <th>ID</th>
                         <th>Họ Tên</th>
                         <th>Email</th>
-                        <th>Password</th>
                         <th>Địa Chỉ</th>
                         <th>Phone</th>
                         <th>Cấp Bậc</th>
                         <th>Chức Năng</th>
                       </thead>
+                      <% @admin_users.each do |admin_user| %>
                       <tbody>
                         <tr class="text-center">
-                          <td>1</td>
-                          <td>Nguyễn Văn Dũng</td>
-                          <td>vandungcode@gmail.com</td>
-                          <td>123123</td>
-                          <td>Đà Nẵng</td>
-                           <td>0929588983</td>
-                            <td>Admin</td>
+                          <td><%= admin_user.id%></td>
+                          <td><%= admin_user.name%></td>
+                          <td><%= admin_user.email%></td>
+                          <td><%= admin_user.address%></td>
+                           <td><%= admin_user.phone_number%></td>
+                          <% if admin_user.admin? %>
+                            <td> Admin </td>
+                          <% elsif admin_user.role == "staff" %>
+                              <td> Nhan vien </td>
+                              <% else %>
+                              <td> khach hang </td>
+                          <% end %>
                           <td><a href="" title=""><img src="images/edit (1).png" alt=""> Sửa</a>
                             <a href="" title=""><img src="images/delete-button.png" alt="">Xóa</a>
                           </td>
                         </tr>                                                                          
                       </tbody>
+                      <% end %>
                     </table>
+                    <%= will_paginate @admin_users %>
                   </div>
                 </div>
               </div>
