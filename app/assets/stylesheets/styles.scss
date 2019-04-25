@@ -78,6 +78,9 @@ h3{
 }
 .glyphicon{
   color: #ff9b00;
+  padding-bottom: 5px;
+  padding-top: 10px;
+
 }
 h5{
       margin-left: 40px;
@@ -226,6 +229,53 @@ h5{
 .pagination{
   padding-left: 308px;
 }
+
+/*--------------------------------------------fome dang nhap admin ---------------------------------------------------*/
+
+#loginAdmin{
+            opacity: 0.9;
+            background: white;
+            padding: 60px 40px;
+            margin-top: 80px;
+            box-shadow: -5px 2px 62px 8px rgba(0, 0, 0, 0.75);
+        }
+        #loginAdmin img{
+            width: 150px;
+            margin: auto;
+        }
+        #loginAdmin h1{
+            color: orange;
+            text-align: center;
+            font-weight: bolder;
+            margin-top: -20px;
+        }
+        #loginAdmin label{
+               font-size: 18px;
+                text-shadow: 1px 0px 2px
+        }
+        #loginAdmin input[type="email"], input[type="password"]{
+            
+            font-size: 12px;
+        }
+        #loginAdmin button[type="submit"]{
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+        }
+        #loginAdmin input[type="checkbox"]{
+            width: 18px;
+            margin-top: -5px;
+
+        }
+        .bgAdmin{
+                min-height: 100%;
+                min-width: 1024px;
+                width: 100%;
+                height: auto;
+                position: fixed;
+                top: 0;
+                left: 0;
+        }       
 /*---------------------------------------------------------------------------------------------------------*/
 .service{
   color: black;
