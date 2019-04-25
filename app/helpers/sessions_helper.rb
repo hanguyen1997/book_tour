@@ -20,10 +20,15 @@
     logged_in? && @current_user.admin?
   end
 
+  def logged_in_as_staff?
+    logged_in? && @current_user.role == "staff"
+  end
+
   def log_out
     session.delete(:user_id)
     @current_user = nil
   end
+  
   def redirect_back_or(default)
     redirect_to(session[:forwarding_url] || default)
     session.delete(:forwarding_url)

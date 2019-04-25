@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       log_in user
       flash.now[:danger] = 'welcome' # Not quite right!
-      redirect_to root_path
+      check_admin user
     else
       flash.now[:danger] = 'Invalid email/password combination' # Not quite right!
       render 'new'
@@ -21,4 +21,10 @@ class SessionsController < ApplicationController
   	log_out
     redirect_to root_path
   end
+
+   private
+
+    def check_admin user
+      user.admin? || user.role == "staff" ? redirect_to(admin_root_url) : redirect_back_or(root_url)
+    end
 end
