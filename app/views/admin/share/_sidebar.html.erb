@@ -7,20 +7,14 @@
         <ul class="nav">
           <li class="nav-item ">
             <%= link_to admin_root_path, class: "nav-link" do %>
-              <i class="fa fa-list-alt" aria-hidden="true"></i>
-              <p>Trang chu</p>
-            <% end %>
-          </li>
-          <li class="nav-item active ">
-            <%= link_to admin_categories_path, class: "nav-link" do %>
-              <i class="fa fa-list-alt" aria-hidden="true"></i>
-              <p>Quan Lý Danh Mục</p>
+              <i class="fa fa-home" aria-hidden="true"></i>
+              <p>Trang chủ</p>
             <% end %>
           </li>
           <li class="nav-item ">
-            <%= link_to admin_users_path, class: "nav-link" do %>
-              <i class="fa fa-user" aria-hidden="true"></i>
-              <p>Thông Tin Người Dùng</p>
+            <%= link_to admin_categories_path, class: "nav-link" do %>
+              <i class="fa fa-list-alt" aria-hidden="true"></i>
+              <p>Quan Lý Danh Mục</p>
             <% end %>
           </li>
           <li class="nav-item ">
@@ -39,6 +33,12 @@
             <%= link_to admin_comments_path, class: "nav-link" do %>
               <i class="fa fa-commenting" aria-hidden="true"></i>
               <p>Bình Luận</p>
+            <% end %>
+          </li>
+          <li class="nav-item ">
+            <%= link_to admin_users_path, class: "nav-link" do %>
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <p>Thông Tin Người Dùng</p>
             <% end %>
           </li>
         </ul>
@@ -64,7 +64,7 @@
                   <i class="fa fa-user" aria-hidden="true"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="#">Thông Tin</a>
+                  <%= link_to "Thông Tin", admin_users_path, class: "dropdown-item"%>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">Log out</a>
                 </div>
