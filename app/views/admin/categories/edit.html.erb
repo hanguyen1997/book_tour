@@ -1,4 +1,4 @@
-<% provide(:title, "them moi danh muc")%>
+<% provide(:title, "chinh sua danh muc")%>
 <div class="content">
         <div class="container-fluid">
           <div class="row">
@@ -6,7 +6,7 @@
             <div class="col-md-6">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Thêm Danh Mục</h4>
+                  <h4 class="card-title">chinh sua Danh Mục</h4>
                 </div>
                 <div class="card-body">
                     <%= form_for [:admin, @admin_category] do |f| %>
@@ -23,7 +23,7 @@
                     <div class="row">
                       <div class="col-md-4"></div>
                       <div class="col-md-4">
-                        <%= f.submit "Thêm Mới", class: "btn btn-primary text-center",data: { confirm: "ban muon them danh muc" } %>
+                        <%= f.submit "Thêm Mới", class: "btn btn-primary text-center",data: { confirm: "ban co muon chinh sua danh muc " } %>
                       </div>
                     </div>
                     <% end %>

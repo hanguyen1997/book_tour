@@ -17,13 +17,19 @@
                         <th>Chức Năng</th>
                       </thead>
                       <tbody>
-                        <% @admin_categories.each do |admin_categorie | %>
+                        <% @admin_categories.each do |admin_category | %>
                           <tr class="text-center">
-                            <td><%= admin_categorie.id %></td>
-                            <td><%= admin_categorie.name %></td>
+                            <td><%= admin_category.id %></td>
+                            <td><%= admin_category.name %></td>
                             <td>
-                              <a href="" title=""><img src="images/edit (1).png" alt=""> Sửa</a>
-                              <a href="" title=""><img src="images/delete-button.png" alt="">Xóa</a>
+                              <%= link_to "Sửa", edit_admin_category_path(admin_category) %>
+                              <%= image_tag("edit.png") %>
+                              <% if current_user.admin? %>
+                                <%= link_to admin_category_path(admin_category), method: :delete,data: { confirm: "You sure?" } do %>
+                                    Delete
+                                    <%= image_tag("delete.png") %>
+                                <% end %>
+                              <% end %>
                             </td>
                           </tr>
                         <% end %>     
