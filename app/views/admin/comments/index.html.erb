@@ -27,8 +27,10 @@
                     <%= admin_comment.content %>        
                     </td>
                     <td>
-                      
-                      <a href="" title=""><img src="images/delete-button.png" alt="">Xóa</a>
+                       <%= link_to admin_comment_path(admin_comment), method: :delete,data: { confirm: "ban muon xoa binh luan?" } do %>
+                         Delete
+                       <%= image_tag("delete.png") %>
+                        <% end %>
                     </td>
                   </tr> 
                   <% end %>                                                                         
