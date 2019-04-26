@@ -30,8 +30,12 @@
                             <%= admin_tour.content %>        
                             </td>
                             <td>
-                              <a href="" title=""><img src="images/edit (1).png" alt=""> Sửa</a>
-                              <a href="" title=""><img src="images/delete-button.png" alt="">Xóa</a>
+                              <%= link_to "Sửa", edit_admin_tour_path(admin_tour) %>
+                              <%= image_tag("edit.png") %>
+                              <%= link_to admin_tour_path(admin_tour), method: :delete,data: { confirm: "ban muon xoa binh luan?" } do %>
+                              Delete
+                              <%= image_tag("delete.png") %>
+                        <% end %>
                             </td>
                           </tr>   
                           <% end %>                                                                       
