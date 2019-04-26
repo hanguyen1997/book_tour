@@ -1824,3 +1824,88 @@ body {
 .card[class*="bg-"] .icon i {
   color: #fff;
 }
+
+/* ============= Trang Chu ==== Them Chi Tiet Tour ================ */
+#wellcome{
+  font-family: serif;
+    text-shadow: 2px 2px 2px #595650;
+    margin-top: 210px;
+    margin-left: 70px;
+    color: #ff9800;
+    font-size: 51px;
+    font-weight: bold;
+    position: relative;
+}
+
+.chitietAdmin{
+  margin-top: 70px; 
+}
+.title-tt{
+  color: orange;
+}
+.thongtintt{
+      margin-top: 55px;
+    margin-left: 80px;
+}
+#chitietTour{
+      border: 1px solid #ffffff;
+    box-shadow: 2px 2px 5px;
+    background: #ffffff;
+
+}
+#chitietTour p{
+  font-size: 16px;
+    line-height: 30px;
+    text-align: justify;
+    padding: 0 0 0 12px;
+}
+
+#titleTT{
+  color: #fc6600;
+    text-shadow: 1px 2px 2px #595650;
+}
+#checkTour{
+  border: 1px solid #ffffff;
+  box-shadow: 2px 2px 5px;
+  background: #ffffff;
+  height: 200px;
+}
+#checkTour span{
+  color: #fc6600;
+}
+#checkTour h3{
+  color: #fc6600
+}
+#checkAdmin{
+    font-size: 14px;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+#editTour{
+  border: 1px solid orange;
+    padding: 12px;
+    background: orange;
+    color: white;
+    border-radius: 10px;
+}
+#xoaTour{
+  border: 1px solid #ff0000;
+    padding: 12px;
+    background: #ff0000;
+    color: white;
+    border-radius: 10px;
+}
+#bgAdmin{
+  min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#ttAdmin{
+  color: black;
+  font-size: 20px;
+  margin-top: 30px;
+}
