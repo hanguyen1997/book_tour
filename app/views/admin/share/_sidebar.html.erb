@@ -35,12 +35,14 @@
               <p>Bình Luận</p>
             <% end %>
           </li>
+          <% if current_user.admin? %>
           <li class="nav-item ">
             <%= link_to admin_users_path, class: "nav-link" do %>
               <i class="fa fa-user" aria-hidden="true"></i>
               <p>Thông Tin Người Dùng</p>
             <% end %>
           </li>
+          <% end %>
         </ul>
       </div>
     </div>

@@ -35,8 +35,15 @@
                               <% else %>
                               <td> khach hang </td>
                           <% end %>
-                          <td><a href="" title=""><img src="images/edit (1).png" alt=""> Sửa</a>
-                            <a href="" title=""><img src="images/delete-button.png" alt="">Xóa</a>
+                          <td>
+                              <%= link_to "Sửa", edit_admin_user_path(admin_user) %>
+                              <%= image_tag("edit.png") %>
+                             <% if current_user.admin? %>
+                                <%= link_to admin_user_path(admin_user), method: :delete,data: { confirm: "You sure?" } do %>
+                                    Delete
+                                    <%= image_tag("delete.png") %>
+                                <% end %>
+                              <% end %>
                           </td>
                         </tr>                                                                          
                       </tbody>

@@ -1,4 +1,4 @@
-<% provide(:title, "them moi nguoi dung")%>
+<% provide(:title, "chinh sua thong tin nguoi dung")%>
 <div class="content">
         <div class="container-fluid">
           <div class="row">
@@ -9,7 +9,7 @@
                   <h4 class="card-title">Thêm Người Dùng</h4>
                 </div>
                 <div class="card-body">
-                  <%= form_for [:admin, @admin_user] do |f| %>
+                   <%= form_for [:admin, @admin_user] do |f| %>
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
@@ -20,7 +20,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <%= f.label :email, class: 'bmd-label-floating'%>
-                          <%= f.email_field :email, class: 'form-control' %>
+                          <%= f.email_field :email, class: 'form-control', readonly: "False" %>
                         </div>
                       </div>
                     </div>
@@ -50,7 +50,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                             <%= f.label :phone_number, class: 'bmd-label-floating'%>
-                          <%= f.number_field :phone_number, class: 'form-control' %>
+                          <%= f.text_field :phone_number, class: 'form-control' %>
                         </div>
                       </div>
                       <div class="col-md-4">
@@ -66,7 +66,7 @@
                     <div class="row">
                       <div class="col-md-5"></div>
                       <div class="col-md-4">
-                          <%= f.submit "Thêm Mới", class: "btn btn-primary text-center",data: { confirm: "ban muon them nguoi dung" } %>
+                          <%= f.submit "Thêm Mới", class: "btn btn-primary text-center",data: { confirm: "ban muon chinh sua nguoi dung" } %>
                       </div>
                     </div>
                   <% end %>
