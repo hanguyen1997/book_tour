@@ -15,7 +15,9 @@ Rails.application.routes.draw do
     root "dashboard#index"
     resources :categories
     resources :users
-    resources :tours
     resources :comments
+    resources :tours do
+      resources :description_details, except: %i(index show)
+    end
   end
 end

@@ -5,6 +5,11 @@ module Admin
 			 @admin_tours = Tour.all.paginate(page: params[:page], per_page: 10)
 		end
 
+		def show
+    		 @admin_tour = Tour.find_by id: params[:id]
+    		 @admin_descripption_details = DescriptionDetail.all.desription_detail_by_tour @admin_tour
+  		end
+
 		def new
     		@admin_tour = Tour.new
   		end
