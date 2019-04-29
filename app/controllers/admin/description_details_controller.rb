@@ -42,7 +42,7 @@ module Admin
 	    private
 
 		def description_detail_params
-		      params.require(:description_detail).permit :price, :tour_id, :start_day, :end_day
+		      params.require(:description_detail).permit :price, :tour_id, :start_day, :end_day, :max_quantity
 		end
 
 		def load_description_detail

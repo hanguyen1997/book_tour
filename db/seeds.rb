@@ -24,7 +24,8 @@ DescriptionDetail.delete_all
     price: Faker::Number.decimal(2),
     start_day: day ,
     end_day: day + 5.days,
-    tour_id: Faker::Number.between(1, 13)
+    tour_id: Faker::Number.between(1, 13),
+    max_quantity: 30
   )
 end
 
