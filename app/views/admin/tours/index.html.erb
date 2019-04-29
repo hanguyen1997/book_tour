@@ -23,8 +23,8 @@
                           <% @admin_tours.each do |admin_tour| %>
                           <tr class="text-center">
                             <td><%= admin_tour.id %></td>
-                            <td><%= admin_tour.category.name %></td>
-                            <td><%= admin_tour.name %></td>
+                            <td><%= admin_tour.category.name %></a></td>
+                            <td><%= link_to admin_tour.name, admin_tour_path(admin_tour) %></td>
                             <td><img src="images/hue.jpg" height="90px" width="150px" alt=""></td>
                             <td class="ct" id="nd">
                             <%= admin_tour.content %>        

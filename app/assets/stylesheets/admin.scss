@@ -1868,7 +1868,8 @@ body {
   border: 1px solid #ffffff;
   box-shadow: 2px 2px 5px;
   background: #ffffff;
-  height: 200px;
+  height: 240px;
+  margin-top: 30px;
 }
 #checkTour span{
   color: #fc6600;
@@ -1887,6 +1888,7 @@ body {
     background: orange;
     color: white;
     border-radius: 10px;
+    margin-right: 10px;
 }
 #xoaTour{
   border: 1px solid #ff0000;
@@ -1908,4 +1910,14 @@ body {
   color: black;
   font-size: 20px;
   margin-top: 30px;
+}
+#addTour{
+        border: 1px solid orange;
+    background: orange;
+    color: white;
+    padding: 15px 85px;
+    border-radius: 10rem;
+}
+#themT{
+  margin-top:12px; 
 }

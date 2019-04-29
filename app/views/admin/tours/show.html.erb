@@ -1,0 +1,44 @@
+<% provide(:title, "thon tin chi tiet tour ")%>
+
+  <div class="chitietAdmin">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-1">                      
+                </div>
+                <div id="chitietTour" class="col-sm-6">
+                        <h2 id="titleTT" class="text-center"><%= @admin_tour.name %></h2>
+                       <p id="noidung"><%= @admin_tour.content %></p>
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-3">                                               
+                    <div id="themT" class="text-center" > 
+                      <%= link_to new_admin_tour_description_detail_path(@admin_tour), id: 'addTour' do %> 
+                        <i class="fa fa-plus-square" aria-hidden="true"></i> Thêm
+                      <% end %>                                    
+                    </div>             
+                    <% @admin_descripption_details.each do |admin_descripption_detail| %>            
+                      <div id="checkTour"  >
+                          <div id="checkAdmin"> 
+                                <p><span class="fa fa-calendar-check-o"></span><strong> Ngày Khởi Hành : </strong> 
+                                  <%= l admin_descripption_detail.start_day, format: "%Y-%m-%d" %></p>
+                                <p><span class="fa fa-calendar-times-o"></span><strong> Ngày Kết Thúc : </strong> <%= l admin_descripption_detail.end_day, format: "%Y-%m-%d" %></p>
+                                <p><span class="fa fa-calendar-check-o"></span><strong> so cho con trong : </strong> 
+                                  30 </p>
+                                <h3 class="text-center"><%= admin_descripption_detail.price %> USD</h3>        
+                          </div>
+                          <div class="text-center">
+                            <%= link_to edit_admin_tour_description_detail_path(@admin_tour, admin_descripption_detail), id: 'editTour' do %> 
+                              <i class="fa fa-pencil" aria-hidden="true"> </i> Sửa
+                              <% end %>
+                              <%= link_to admin_tour_description_detail_path(@admin_tour, admin_descripption_detail), id: 'xoaTour', method: :delete,data: { confirm: "ban muon xoa binh luan?" } do %> 
+                              <i class="fa fa-trash-o" aria-hidden="true"> </i> xoa
+                              <% end %>
+                                   
+                          </div> 
+                      </div>  
+                    <% end %>                 
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+        </div>
+  </div>
