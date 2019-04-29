@@ -88,6 +88,7 @@
           <p><span class="glyphicon glyphicon-calendar"></span><strong> Khởi Hành</strong>
             <%= l descripption_details.start_day, format: "%Y-%m-%d" %><strong> - Kết Thúc : 
           </strong><%= l descripption_details.end_day, format: "%Y-%m-%d" %></p>
+           <p><span class="glyphicon glyphicon-user"></span><strong> Số Chổ Còn Trống</strong>: <%= descripption_details.max_quantity%></p> 
           <p><span class="glyphicon glyphicon-earphone"></span><strong> Liên Hệ</strong>: 19001800</p> 
           <h3><%= descripption_details.price %> USD</h3> 
           <%= link_to 'Đặt Tour', new_booking_path, id: 'bookTour'%> 
