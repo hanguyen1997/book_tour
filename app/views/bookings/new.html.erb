@@ -37,29 +37,36 @@
 			<div >
 				<div class="col-sm-7" id="noidungtttt">
 					<div class="row">
-						<div class="col-sm-12 text-center"><h2>Đà Nẵng -Hà Nội - Ninh Bình</h2></div>
+						<div class="col-sm-12 text-center"><h2><%= @description_detail.tour.name %></h2></div>
 					</div>				
 					<div class="row infoThanhToan ">
 						<div class="col-sm-12">
-							<div class="col-sm-6"><span class="glyphicon glyphicon-calendar"></span> Ngày Khởi Hành: <strong> 14/02/2019</strong></div>
-							<div class="col-sm-6"><span class="glyphicon glyphicon-calendar"></span> Ngày Kết Thúc: <strong> 20/02/2019</strong> </div>
+							<div class="col-sm-6"><span class="glyphicon glyphicon-calendar"></span> Ngày Khởi Hành: 
+							<strong> <%= l @description_detail.start_day, format: "%d-%m-%Y" %></strong>
+							</div>
+							<div class="col-sm-6"><span class="glyphicon glyphicon-calendar"></span> Ngày Kết Thúc: <strong> <%= l @description_detail.end_day, format: "%d-%m-%Y" %></strong> </div>
 						</div>
 						<div class="col-sm-12">
-							<div class="col-sm-6"><span class="glyphicon glyphicon-usd"></span> Giá Tour: <strong>3000000 VNĐ</strong></div>
-							<div class="col-sm-6"><span class="glyphicon glyphicon-th"></span> Số Chỗ Còn Nhận: <strong>10</strong> </div>
+							<div class="col-sm-6"><span class="glyphicon glyphicon-usd"></span> Giá Tour: <strong><%= @description_detail.price %></strong></div>
+							<div class="col-sm-6"><span class="glyphicon glyphicon-th"></span> Số Chỗ Còn Nhận: <strong><%= @description_detail.max_quantity %></strong> </div>
 						</div>
-						<div class="col-sm-12">
-							<div class="col-sm-6"><span class="glyphicon glyphicon-transfer"></span> Số Khách Đi Tour: </div>
-							<div class="col-sm-6"><input type="number" name="" placeholder=""></div>
-						</div>
-						<div class="col-sm-12 text-center">
-							<%= link_to 'Xác Nhận', bookings_path, id:'btn-xacnhan', class: 'btn btn-warning'%> 
-						</div>
-						
+						<%= form_for(@booking) do |f| %>
+							<div class="col-sm-12">
+								<%= hidden_field_tag "booking[description_detail_id]", @description_detail.id %>
+					            <%= hidden_field_tag "booking[user_id]", current_user.id %>
+					            <%= hidden_field_tag "booking[price]", @description_detail.price, id: "price" %>
+								<div class="col-sm-6"><span class="glyphicon glyphicon-transfer"></span> Số Khách Đi Tour: </div>
+								<div class="col-sm-6">
+								<%= f.number_field :quantity, class: 'form-control'%>
+							</div>
+							</div>
+							<div class="col-sm-12 text-center">
+								<%= f.submit 'Xác Nhận',  class: 'btn btn-warning'%> 
+							</div>
+						<% end %>
 					</div>
+				</div>
 			</div>
-			</div>
-			
 		</div>
 	</div>
 </div>
