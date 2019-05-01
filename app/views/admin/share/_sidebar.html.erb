@@ -24,10 +24,11 @@
             <% end %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./tables.html">
+            <%= link_to admin_bookings_path, class: "nav-link" do %>
               <i class="fa fa-money" aria-hidden="true"></i>
               <p>Booking</p>
-            </a>
+            <% end %>
+           
           </li>
           <li class="nav-item ">
             <%= link_to admin_comments_path, class: "nav-link" do %>
@@ -66,7 +67,7 @@
                   <i class="fa fa-user" aria-hidden="true"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <%= link_to "Thông Tin", admin_users_path, class: "dropdown-item"%>
+                  <%= link_to "Thông Tin", current_user, class: "dropdown-item"%>
                   <div class="dropdown-divider"></div>
                   <%= link_to "Log out", logout_path , class: 'dropdown-item', method: :delete  %>
                 </div>

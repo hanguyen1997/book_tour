@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     resources :categories
     resources :users
     resources :comments
+    resources :bookings
     resources :tours do
       resources :description_details, except: %i(index show)
     end
