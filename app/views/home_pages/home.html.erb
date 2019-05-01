@@ -67,20 +67,18 @@
 <!-- Search -->
 <div class="search">
     <div class="container text-center">
-        <form class="form-inline">
+        <%= search_form_for @search ,class: "form-inline" do |f| %>
             <div class="input-group">
-                <input type="text" class="form-control" size="150" placeholder="Bạn Muốn Đi Đâu?" required/>
+                <!-- <input type="text" class="form-control" size="150" placeholder="Bạn Muốn Đi Đâu?" required/> -->
+                <%= f.text_field :name_or_itinerary_cont, class: "form-control", size: "150" , placeholder: "Bạn Muốn Đi Đâu?" %>
                 <div class="input-group-btn" >
-                    <button type="button" class="btn btn-warning">Tìm Tour</button>
+                    <%= submit_tag "Tìm Tour", class: "btn btn-warning" %>
                 </div>
             </div>
-        </form>
+        <% end %>
   </div>
 </div>
 <!--login -->>
-
-
-
 
 <!-- content -->
 <div class="content">

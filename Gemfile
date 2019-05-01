@@ -19,6 +19,7 @@ gem 'will_paginate', '3.1.7'
 gem 'bootstrap-will_paginate'
 gem 'bcrypt', '3.1.12'
 gem 'jquery-rails'
+gem "ransack"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

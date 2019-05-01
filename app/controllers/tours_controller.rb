@@ -1,8 +1,11 @@
 class ToursController < ApplicationController
-  
+
   def index 
+      @search = Tour.search params[:q]
       @tours_domestic = Tour.tours_domestic(1)
       @tours_international = Tour.tours_international(2)
+      @tours = @search.result(distinct: true)
+        .paginate(page: params[:page], per_page: 10)
   end
 
   def show 
