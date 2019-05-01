@@ -41,6 +41,7 @@
     <div class="container">
         <div>
             <div class="row ">
+                <%= form_for(@booking) do |f| %>
                 <div class="col-sm-12 thanks text-center" >Xác Nhận Thanh Toán Tour</div>
                 <div class="col-sm-12">
                     <table class="table">
@@ -56,19 +57,20 @@
                         </thead>
                         <tbody>
                           <tr class="warning">
-                            <td>Đà Nẵng - Hà Nội - Ninh Bình</td>
-                            <td>14/02/2019</td>
-                            <td>15/02/2019</td>
-                            <td>3000000 VNĐ</td>
-                            <td>2</td>
-                            <td>6000000</td>
+                            <td><%= @booking.description_detail.tour.name  %></td>
+                            <td> <%= l @booking.description_detail.start_day, format: "%d-%m-%Y" %></td>
+                            <td><%= l @booking.description_detail.end_day, format: "%d-%m-%Y" %></td>
+                            <td><%= @booking.description_detail.price %></td>
+                            <td><%= @booking.quantity %></td>  
+                            <td><%= (@booking.quantity * @booking.description_detail.price )%></td>
                           </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="col-sm-12 text-center">
-                     <%= link_to 'Thanh Toán', bookings_path, class: 'btn btn-warning'%> 
+                     <%= f.submit "Thanh Toán", class: "btn btn-warning" %>
                 </div>
+               <% end %>
             </div>
         </div>
     </div>

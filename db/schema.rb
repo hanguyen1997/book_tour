@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2019_04_29_090803) do
   create_table "bookings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "description_detail_id"
-    t.integer "status"
+    t.boolean "status"
     t.float "price"
     t.integer "quantity"
     t.datetime "created_at", null: false
