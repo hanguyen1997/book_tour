@@ -22,7 +22,6 @@
                   </thead>
                   <tbody>
                     <% @admin_bookings.each do |admin_booking| %>
-                    <% if admin_booking.status ==  true %>
                     <tr class="text-center">
                       <td><%= admin_booking.id %></td>
                       <td><%= admin_booking.description_detail.tour.name %></td>
@@ -32,8 +31,6 @@
                       <td><%= admin_booking.quantity %></td>
                       <td><%= admin_booking.price  %> $</td>
                     </tr>
-                    <% else %>
-                    <% end %>
                     <% end %>     
                   </tbody>
                 </table>

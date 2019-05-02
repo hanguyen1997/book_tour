@@ -26,15 +26,15 @@
                     </div>
                     <div class="row">
                       <div class="col-md-12">
-                        <label for="exampleInputFile">Hình Ảnh</label>
-                        <input type="file" class="form-control-file" id="exampleInputFile" >                                            
+                        <%= f.label :image, "Hình Ảnh", class: "col-md-2 control-label" %>
+                        <%= f.file_field :image, accept: "image/jpeg, image/gif, image/png", class: "form-control-file", id: "exampleInputFile" %>                                            
                       </div>
                     </div>
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
                           <%= f.label :content%>
-                          <%= f.text_field :content, class: 'form-control'%>
+                          <%= f.text_area :content, class: 'form-control'%>
                           
                         </div>
                       </div>
