@@ -524,4 +524,37 @@ input{
       padding: 10px 70px;
       margin-top: 12px;
 }   
+/* -----------------------------Bình luận------------------------------------------ */
+.comment-meta{
+  margin-top: 30px;
+    border-bottom: 1px solid #ccc;
+}
+.comment-meta img{
+      width: 33px;
+
+    float: left;
+    margin-right: 8px;
+}
+.author{
+    color: #fc6600;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    display: inline-block;
+    margin-bottom: 0px;
+    position: relative;
+    top: -1px;
+}
+.reply-form{
+  padding: 0px 0px 0px 40px;
+}
+.comments-replies{
+  margin-top: 20px;
+}
+.comment{
+      margin-left: 50px;
+}
+.comment-editor{
+  display: none;
+}
     
