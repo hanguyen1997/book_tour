@@ -91,7 +91,7 @@
             <div class="col-sm-3 "> 
                 <div class="thumbnail ">
                     <%= link_to tour_domestic, class: 'images' do %>
-  					<%= image_tag 'NinhBinh2.jpg', class: '' %>
+  					<%= image_tag tour_domestic.image.thumb.url if tour_domestic.image? %>
 					<% end %>
                     <p><strong > <%= tour_domestic.name %></strong></p>
                     <%= link_to 'Xem Tour', tour_domestic, class: 'xemTour btn'%>
@@ -108,7 +108,7 @@
                 <div class="col-sm-3 "> 
                    <div class="thumbnail ">
                         <%= link_to tour_international, class: 'images' do %>
-                        <%= image_tag 'da-nang.jpg', class: '' %>
+                        <%= image_tag tour_international.image.thumb.url if tour_international.image? %>
                         <% end %>
                         <p><strong > <%= tour_international.name %></strong></p>
                          <%= link_to 'Xem Tour', tour_international, class: 'xemTour btn'%>

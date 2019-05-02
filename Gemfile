@@ -20,6 +20,9 @@ gem 'bootstrap-will_paginate'
 gem 'bcrypt', '3.1.12'
 gem 'jquery-rails'
 gem "ransack"
+gem "carrierwave"
+gem "mini_magick"
+# gem "fog"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

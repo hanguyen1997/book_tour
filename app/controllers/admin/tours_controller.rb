@@ -47,7 +47,7 @@ module Admin
 	  	private
 
 		    def admin_tour
-		      params.require(:tour).permit(:name, :category_id, :content )
+		      params.require(:tour).permit(:name, :category_id, :content, :image)
 		    end
 
 		    def load_categories

@@ -4,7 +4,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-8">
-        <%= image_tag 'HoiAn.jpg', class: 'image_details' %>
+        <%= image_tag (@tour.image.thumb.url if @tour.image?), class: 'image_details' %>
         <div id="details">
             <div>
                   <h2 class="text-center">Lịch Trình Tour</h2>
