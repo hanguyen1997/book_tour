@@ -22,6 +22,7 @@ gem 'jquery-rails'
 gem "ransack"
 gem "carrierwave"
 gem "mini_magick"
+gem 'ckeditor', '4.2.4'
 # gem "fog"
 
 group :development, :test do

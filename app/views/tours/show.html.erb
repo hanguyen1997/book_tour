@@ -4,7 +4,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-8">
-        <%= image_tag (@tour.image.thumb.url if @tour.image?), class: 'image_details' %>
+        <%= image_tag @tour.image? ? @tour.image.thumb.url : "hue.jpg" , class: "image_details" %>
         <div id="details">
             <div>
                   <h2 class="text-center">Lịch Trình Tour</h2>
@@ -77,6 +77,51 @@
                         <button id="binhluan" class="btn btn-warning" type="submit">Bình Luận</button> 
                     </div>
                 </div>
+                 <div class="comment">
+                     <div class="comment-meta" >
+                         <img src="images/Defaut-6.png" alt="">
+                         <div>
+                              <p class="author">Văn Dũng</p>
+                                <p class="comment-content">Tour này Tốt ko ?</p>
+                         </div>
+                        <a onclick="Reply();" href="javascript:void(0)" title="">Trả Lời</a>
+                       <div class="reply-form">                          
+                            <div class="comment-editor">
+                                <textarea  id="comments" name="comments" placeholder="Viết bình luận của bạn..." rows="3" cols="70"></textarea><br/>
+                                <a href="" class="btn btn-warning" title="">Gửi</a>
+                                <a class="btn btn-default" onclick="Reply();" href="javascript:void(0)" title="">Đóng</a>
+                            </div>                           
+                            <div class="comments-replies">
+                                <img src="images/Defaut-6.png" alt="">
+                                <div>
+                                  <p class="author">Hà Nguyên</p>
+                                  <p class="comment-content">Tour này Tốt....</p>
+                                </div>
+                            </div>
+                       </div>
+                     </div>
+                     <div class="comment-meta" >
+                         <img src="images/Defaut-6.png" alt="">
+                         <div>
+                              <p class="author">Văn Dũng</p>
+                                <p class="comment-content">Tour này Tốt ko ?</p>
+                         </div>
+                        <a onclick="Reply();" href="javascript:void(0)" title="">Trả Lời</a>
+                       <div class="reply-form">                          
+                            <div class="comment-editor">
+                                <textarea  id="comments" name="comments" placeholder="Viết bình luận của bạn..." rows="3" cols="70"></textarea><br/>
+                                <a href="" class="btn btn-warning" title="">Gửi</a>
+                                <a class="btn btn-default" onclick="Reply();" href="javascript:void(0)" title="">Đóng</a>
+                            </div>                           
+                            <div class="comments-replies">
+                                <img src="images/Defaut-6.png" alt="">
+                                <div>
+                                  <p class="author">Hà Nguyên</p>
+                                  <p class="comment-content">Tour này Tốt....</p>
+                                </div>
+                            </div>
+                       </div>
+                     </div>
             </div>
         </div>
         

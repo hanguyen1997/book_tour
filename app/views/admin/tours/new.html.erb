@@ -34,7 +34,7 @@
                       <div class="col-md-12">
                         <div class="form-group">
                           <%= f.label :content%>
-                          <%= f.text_area :content, class: 'form-control'%>
+                          <%= f.cktext_area :content, class: 'form-control', ckeditor: { language: 'uk', toolbar: 'Full' } %>
                           
                         </div>
                       </div>

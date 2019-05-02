@@ -21,4 +21,7 @@ Rails.application.routes.draw do
       resources :description_details, except: %i(index show)
     end
   end
+
+  mount Ckeditor::Engine => '/ckeditor'
 end
+
