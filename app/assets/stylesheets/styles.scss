@@ -226,9 +226,7 @@ h5{
 .text-center-detail{
   margin: 41px 0 10px;
 }
-.pagination{
-  padding-left: 308px;
-}
+
 
 /*--------------------------------------------fome dang nhap admin ---------------------------------------------------*/
 
@@ -349,7 +347,7 @@ h5{
       margin-bottom: 50px;
 }
 #binhluan{
-margin-left: 420px;
+margin-left: 495px;
 }
 .bl{
   margin-left: 50px;
@@ -519,9 +517,102 @@ margin-left: 420px;
 }
 input{
   height: 36px;
+  width: auto;
+  margin-bottom: 10px;
 }
 #btn-xacnhan{
       padding: 10px 70px;
       margin-top: 12px;
 }   
-    
+/* -----------------------------Bình luận------------------------------------------ */
+.fom_comment{
+  width: 550px;
+  height: 36px;
+}
+.comment-meta{
+  margin-top: 30px;
+  border-bottom: 1px solid #ccc;
+  margin-left: 10px;
+}
+.comment-meta img{
+      width: 33px;
+
+    float: left;
+    margin-right: 8px;
+}
+.author{
+    color: #fc6600;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    display: inline-block;
+    margin-bottom: 0px;
+    position: relative;
+    top: -1px;
+}
+.reply-form{
+  padding: 0px 0px 0px 40px;
+}
+.comments-replies{
+  margin-top: 20px;
+}
+.comment{
+      margin-left: 50px;
+}
+.comment-editor{
+  display: none;
+}
+
+/* ----------------------------- ------------------------------------------ */
+.pagination {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  margin-top: 10px;
+  padding-left: 230px;
+}
+.pagination li {
+  display: inline;
+  text-align: center;
+}
+.pagination a {
+  float: left;
+  display: block;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 5px 12px;
+  color: #fff;
+  margin-left: -1px;
+  border: 1px solid transparent;
+  line-height: 1.5;
+}
+.pagination a.active {
+  cursor: default;
+}
+.pagination a:active {
+  outline: none;
+}
+
+.modal-1 li:first-child a {
+  -moz-border-radius: 6px 0 0 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px 0 0 6px;
+}
+.modal-1 li:last-child a {
+  -moz-border-radius: 0 6px 6px 0;
+  -webkit-border-radius: 0;
+  border-radius: 0 6px 6px 0;
+}
+.modal-1 a {
+  border-color: #ddd;
+  color: #4285F4;
+  background: #fff;
+}
+.modal-1 a:hover {
+  background: #eee;
+}
+.modal-1 a.active, .modal-1 a:active {
+  border-color: #4285F4;
+  background: #4285F4;
+  color: #fff;
+}
