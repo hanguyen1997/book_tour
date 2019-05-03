@@ -4,7 +4,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-8">
-        <%= image_tag (@tour.image.thumb.url if @tour.image?), class: 'image_details' %>
+        <%= image_tag @tour.image? ? @tour.image.thumb.url : "hue.jpg", class: 'image_details' %>
         <div id="details">
             <div>
                   <h2 class="text-center">Lịch Trình Tour</h2>
@@ -71,12 +71,28 @@
                     </div>
                 </div>
                 <div>
-                     <h3 class="dv"><span class=" glyphicon glyphicon-comment"></span> Bình Luận</h3>
-                     <div class="bl" >
-                       <textarea  id="comments" name="comments" placeholder="Viết bình luận của bạn..." rows="2" cols="70"></textarea><br/>
-                        <button id="binhluan" class="btn btn-warning" type="submit">Bình Luận</button> 
+                    <h3 class="dv"><span class=" glyphicon glyphicon-comment"></span> Bình Luận</h3>
+                    <% if logged_in? %>
+                    <div class="bl" >
+                      <%= form_for @review do |f| %>
+                        <%= hidden_field_tag "review[tour_id]", @tour.id %>
+                        <%= hidden_field_tag "review[user_id]", current_user.id %>
+                        <%= f.text_field :content,  placeholder: "Viết bình luận của bạn...", class: "fom_comment"%>
+                        <%= f.submit "Bình Luận", class: "btn btn-warning" %>
+                      <% end %>
                     </div>
+                    <% end %>
                 </div>
+                <% @reviews.each do |review| %>
+                <div class="comment-meta" >
+                      <%= image_tag ("avta_comment.png") %>
+                      <div>
+                          <p class="author"><%= review.user.name%></p>
+                          <p class="comment-content"><%= review.content%></p>
+                       </div>
+                </div>
+                 <% end  %>
+                <%= will_paginate @reviews %>
             </div>
         </div>
         
@@ -133,3 +149,13 @@
       </div>
     <% end %>
 </div>
+<script type="text/javascript">
+    function Reply () {
+             var x = document.getElementsByClassName("comment-editor")[0];
+            if(x.style.display === "none"){
+                x.style.display = "block";
+            }else{
+                x.style.display="none";
+            }
+        }
+</script>
