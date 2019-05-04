@@ -1,0 +1,29 @@
+<% provide(:title, "Dang Nhap")%>
+<html lang="en">
+<body>
+<div class="login">
+    <div class="modal-dialog">    
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1> Đăng Nhập</h1>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <%= f.label :email, " Nhap Email",class: "glyphicon glyphicon-user" %>
+              <%= f.email_field :email, class: 'form-control', placeholder: "Nhập email..." %>
+              <%= f.label :Password, " Nhap Mat Khau",class: "glyphicon glyphicon-eye-open" %>
+              <%= f.password_field :password, class: 'form-control', placeholder: "Nhập email..." %>
+               <%= f.submit "Log in", class: "btn btn-warning btn-block"%>
+           
+          <% end %>
+          </div>
+          <p>New user? <%= link_to "dang ki!", new_user_registration_path%></p>
+        </div>
+      </div>      
+    </div>
+</div>
+  </body>
+</html>
+
+

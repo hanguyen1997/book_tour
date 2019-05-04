@@ -7,8 +7,9 @@ Rails.application.routes.draw do
   get "/history", to: "histories#index"
   get '404', to:'public#404'
   
+  devise_for :users
   resources :tours
-  resources :users
+  resources :users, only: :show
   resources :bookings
   resources :reviews
 
