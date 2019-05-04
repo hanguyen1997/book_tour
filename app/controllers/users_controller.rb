@@ -1,39 +1,40 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:index, :edit, :update]
-  before_action :correct_user,   only: [:index, :edit, :update]
+  # before_action :logged_in_user, only: [:index, :edit, :update]
+  # before_action :correct_user,   only: [:index, :edit, :update]
+  before_action :authenticate_user!
 
   def show
     @user = User.find(params[:id])
   end
 
-  def new
-    @user = User.new
-  end
+  # def new
+  #   @user = User.new
+  # end
 
-  def create
-    @user = User.new(user_params)
-    if @user.save
-      log_in @user
-      flash[:success] = "Welcome to viet travel"
-      redirect_to current_user
-    else
-      flash.now[:danger] = 'Invalid email/password combination'
-      render 'new'
-    end
-  end
+  # def create
+  #   @user = User.new(user_params)
+  #   if @user.save
+  #     log_in @user
+  #     flash[:success] = "Welcome to viet travel"
+  #     redirect_to current_user
+  #   else
+  #     flash.now[:danger] = 'Invalid email/password combination'
+  #     render 'new'
+  #   end
+  # end
 
-  def edit
-    @user = User.find(params[:id])
-  end
+  # def edit
+  #   @user = User.find(params[:id])
+  # end
 
-  def update
-    @user = User.find(params[:id])
-    if @user.update_attributes(user_params)
-      redirect_to current_user
-    else
-      render "edit"
-    end
-  end
+  # def update
+  #   @user = User.find(params[:id])
+  #   if @user.update_attributes(user_params)
+  #     redirect_to current_user
+  #   else
+  #     render "edit"
+  #   end
+  # end
 
   private
 
@@ -42,7 +43,7 @@ class UsersController < ApplicationController
     end
 
     def logged_in_user
-      unless logged_in?
+      unless user_signed_in?
         store_location
         flash[:danger] = "Please log in."
         redirect_to login_url

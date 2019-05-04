@@ -22,6 +22,7 @@ gem 'jquery-rails'
 gem "ransack"
 gem "carrierwave"
 gem "mini_magick"
+gem "devise"
 # gem "fog"
 
 group :development, :test do
