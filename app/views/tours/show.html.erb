@@ -107,7 +107,12 @@
            <p><span class="glyphicon glyphicon-user"></span><strong> Số Chổ Còn Trống</strong>: <%= descripption_details.max_quantity%></p> 
           <p><span class="glyphicon glyphicon-earphone"></span><strong> Liên Hệ</strong>: 19001800</p> 
           <h3><%= descripption_details.price %> USD</h3> 
-          <%= link_to 'Đặt Tour', new_booking_path(id: descripption_details.id), id: 'bookTour'%> 
+          <% if user_signed_in? %>
+            <%= link_to 'Đặt Tour', new_booking_path(id: descripption_details.id), id: 'bookTour'%> 
+          <% else %>
+            <p>( Bạn vui lòng đăng nhập để đặt tour này )</p>
+          <% end %>
+
         </div>
         <% end %>
       </div>
@@ -123,7 +128,7 @@
         <div class="col-sm-3 "> 
           <div class="thumbnail ">
             <%= link_to tour_domestic, class: 'images' do %>
-            <%= image_tag 'NinhBinh2.jpg', class: '' %>
+            <%= image_tag tour_domestic.image? ? tour_domestic.image.thumb.url : "NinhBinh2.jpg" %>
             <% end %>
             <p><strong > <%= tour_domestic.name %></strong></p>
             <%= link_to 'Xem Tour', tour_domestic, class: 'xemTour btn'%>
@@ -138,7 +143,7 @@
             <div class="col-sm-3 "> 
               <div class="thumbnail ">
               <%= link_to tour_international, class: 'images' do %>
-              <%= image_tag 'da-nang.jpg', class: '' %>
+              <%= image_tag tour_international.image? ? tour_international.image.thumb.url : "da-nang.jpg"  %>
               <% end %>
               <p><strong > <%= tour_international.name %></strong></p>
                <%= link_to 'Xem Tour', tour_international, class: 'xemTour btn'%>
@@ -149,13 +154,3 @@
       </div>
     <% end %>
 </div>
-<script type="text/javascript">
-    function Reply () {
-             var x = document.getElementsByClassName("comment-editor")[0];
-            if(x.style.display === "none"){
-                x.style.display = "block";
-            }else{
-                x.style.display="none";
-            }
-        }
-</script>

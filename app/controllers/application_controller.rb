@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
     return if user_signed_in?
     store_location
     flash[:danger] = "Please log in"
-    redirect_to login_url
+    redirect_to new_user_session_path
   end
 
   protected
