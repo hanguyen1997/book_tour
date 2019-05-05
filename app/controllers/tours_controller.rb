@@ -15,8 +15,9 @@ class ToursController < ApplicationController
 
   def show 
     @review = Review.new
-    @reviews = Review.order("id DESC").reviews_by_tour(@tour).paginate(page: params[:page], per_page: 5)
-    @comments = Comment.comments_by_review @review 
+    @comment = Comment.new
+    @reviews = @tour.reviews.order(id: :desc).paginate(page: params[:page], per_page: 5)
+    @comments = @review.comments
 	  @descripption_details = DescriptionDetail.all.desription_detail_by_tour @tour
 	  @tours_domestic = Tour.tours_domestic(1).sample(4)
     @tours_international = Tour.tours_international(2).sample(4)

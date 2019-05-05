@@ -1,5 +1,13 @@
 <% provide(:title, "Details")%>
 <!-- Chitiet -->
+<script type="text/javascript">
+  function Reply(id) {
+    var target = document.getElementById(id);
+    debugger;
+    $(target).toggleClass('show');
+  }
+</script>
+
 <div class="Chitiet">
   <div class="container">
     <div class="row">
@@ -83,17 +91,37 @@
                     </div>
                     <% end %>
                 </div>
-                <% @reviews.each do |review| %>
-                <div class="comment-meta" >
+                  <% @reviews.each do |review| %>
+                    <div class="comment-meta" >
                       <%= image_tag ("avta_comment.png") %>
                       <div>
                           <p class="author"><%= review.user.name%></p>
                           <p class="comment-content"><%= review.content%></p>
+                      </div>
+                      <a onclick="Reply(<%= review.id %>);" href="javascript:void(0)" title="">Trả Lời</a>
+                       <div class="reply-form">                          
+                            <div class="comment-editor hide" id="<%= review.id %>">
+                              <%= form_for @comment do |f| %>
+                                <%= hidden_field_tag "comment[tour_id]", @review.id %>
+                                <%= hidden_field_tag "comment[user_id]", current_user.id %>
+                                <%= f.text_field :content,  placeholder: "Viết bình luận của bạn...", class: "fom_comment"%>
+                                <%= f.submit "Bình Luận", class: "btn btn-warning" %>
+                              <% end %>
+                            </div>                           
+                            <div class="comments-replies">
+                              <% review.comments.each do |comment| %>
+                                <%= image_tag ("avta_comment.png") %>
+                                <div>
+                                  <p class="author"><%= comment.user.name%></p>
+                                  <p class="comment-content"><%= comment.content%></p>
+                                </div>
+                              <% end %>
+                            </div>
                        </div>
+                    </div>
+                   <% end  %>
+                  <%= will_paginate @reviews %>
                 </div>
-                 <% end  %>
-                <%= will_paginate @reviews %>
-            </div>
         </div>
         
       </div>
