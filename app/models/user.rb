@@ -1,9 +1,8 @@
 class User < ApplicationRecord
  # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :validatable
-
   has_many :bookings
   has_many :reviews
 
@@ -16,6 +15,7 @@ class User < ApplicationRecord
   #                   format: { with: VALID_EMAIL_REGEX },
   #                   uniqueness: { case_sensitive: false }
   # validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+  # validates :email, uniqueness: true
 
   enum role: {admin: 1, customer: 0, staff: 2}
 end
