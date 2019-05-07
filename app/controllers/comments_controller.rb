@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
   def create
   	@comment = Comment.new comment_params
     if @comment.save
-      redirect_to root_path
+      redirect_to tour_url params[:review][:tour_id]
     else
       flash[:success] = "binh luan khong thanh cong"
       redirect_to root_path

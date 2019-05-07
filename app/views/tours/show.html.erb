@@ -101,12 +101,12 @@
                       <a onclick="Reply(<%= review.id %>);" href="javascript:void(0)" title="">Trả Lời</a>
                        <div class="reply-form">                          
                             <div class="comment-editor hide" id="<%= review.id %>">
-                              <%= form_for @comment do |f| %>
-                                <%= hidden_field_tag "comment[tour_id]", @review.id %>
-                                <%= hidden_field_tag "comment[user_id]", current_user.id %>
-                                <%= f.text_field :content,  placeholder: "Viết bình luận của bạn...", class: "fom_comment"%>
-                                <%= f.submit "Bình Luận", class: "btn btn-warning" %>
-                              <% end %>
+                              <%#= form_for @comment do |f| %>
+                                <%#= hidden_field_tag "comment[tour_id]", @review.id %>
+                                <%#= hidden_field_tag "comment[user_id]", current_user.id %>
+                                <%#= f.text_field :content,  placeholder: "Viết bình luận của bạn...", class: "fom_comment"%>
+                                <%#= f.submit "Bình Luận", class: "btn btn-warning" %>
+                              <%# end %>
                             </div>                           
                             <div class="comments-replies">
                               <% review.comments.each do |comment| %>
