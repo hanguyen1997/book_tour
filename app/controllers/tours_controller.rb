@@ -18,7 +18,7 @@ class ToursController < ApplicationController
     @comment = Comment.new
     @reviews = @tour.reviews.order(id: :desc).paginate(page: params[:page], per_page: 5)
     @comments = @review.comments
-	  @descripption_details = DescriptionDetail.all.desription_detail_by_tour @tour
+	  @descripption_details = DescriptionDetail.hidden_expired_detail.desription_detail_by_tour @tour
 	  @tours_domestic = Tour.tours_domestic(1).sample(4)
     @tours_international = Tour.tours_international(2).sample(4)
   end

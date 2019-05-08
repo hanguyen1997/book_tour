@@ -7,7 +7,7 @@ module Admin
 
 		def show
     		 @admin_tour = Tour.find_by id: params[:id]
-    		 @admin_descripption_details = DescriptionDetail.all.desription_detail_by_tour @admin_tour
+    		 @admin_descripption_details = DescriptionDetail.hidden_expired_detail.desription_detail_by_tour @admin_tour
   		end
 
 		def new

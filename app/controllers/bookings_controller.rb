@@ -6,11 +6,17 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(booking_params)
-    if @booking.save
-      redirect_to edit_booking_path @booking
+    @description_detail = DescriptionDetail.find_by id: params[:booking][:description_detail_id]
+    if params[:booking][:quantity].blank? || params[:booking][:quantity].to_i > @description_detail.max_quantity
+      @booking = Booking.new
+      render "new"
     else
-      render 'new'
+      @booking = Booking.new(booking_params)
+      if @booking.save
+        redirect_to edit_booking_path @booking
+      else
+        render 'new'
+      end
     end
   end
 
