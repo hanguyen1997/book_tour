@@ -8,6 +8,9 @@
                 <div class="card-header card-header-primary" >
                   <h4 class="card-title ">Thông Tin Người Dùng</h4>
                 </div>
+                <% flash.each do |message_type, message| %>
+                  <div class="message alert alert-<%= message_type %>"><%= message %></div>
+                <% end %>
                 <div class="card-body">
                   <div class="table-responsive">
                     <table class="table">

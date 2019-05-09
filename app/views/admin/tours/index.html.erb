@@ -20,6 +20,9 @@
                           <th>Chức Năng</th>
                         </thead>
                         <tbody>
+                          <% flash.each do |message_type, message| %>
+                            <div class="message alert alert-<%= message_type %>"><%= message %></div>
+                          <% end %>
                           <% @admin_tours.each do |admin_tour| %>
                           <tr class="text-center">
                             <td><%= admin_tour.id %></td>

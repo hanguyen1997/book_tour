@@ -11,6 +11,7 @@
           <div class="form-group">
             <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
                 <%= render "devise/shared/error_messages", resource: resource %>
+                <%= hidden_field_tag "user[role]", "customer" %>
                 <div class="form-group">
                   <%= f.label :name," TÊN", class: "glyphicon glyphicon-user"  %><br/>
                   <%= f.text_field :name, class: 'form-control' %>
