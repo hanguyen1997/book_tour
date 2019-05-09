@@ -9,6 +9,9 @@
                   <h4 class="card-title">Chinh Sua Người Dùng</h4>
                 </div>
                 <div class="card-body">
+                  <% flash.each do |message_type, message| %>
+                            <div class="message alert alert-<%= message_type %>"><%= message %></div>
+                          <% end %>
                    <%= form_for [:admin, @admin_user] do |f| %>
                     <div class="row">
                       <div class="col-md-6">
@@ -55,18 +58,15 @@
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Cấp Bậc</label>
-                           <select class="form-control" >
-                              <option>Admin</option>
-                              <option>Nhân Viên</option>
-                            </select>
+                          <%= f.label :role, "Cấp Bậc", class: "bmd-label-floating" %>
+                          <%= f.select(:role, options_for_select(User.roles.map{|key, val| [key.humanize, key]}), {}, { class: "form-control" }) %>
                         </div>
                       </div>
                     </div>
                     <div class="row">
                       <div class="col-md-5"></div>
                       <div class="col-md-4">
-                          <%= f.submit "Thêm Mới", class: "btn btn-primary text-center",data: { confirm: "ban muon chinh sua nguoi dung" } %>
+                          <%= f.submit "chinh sua", class: "btn btn-primary text-center" %>
                       </div>
                     </div>
                   <% end %>

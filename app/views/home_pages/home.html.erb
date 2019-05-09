@@ -2,6 +2,10 @@
 <html lang="en">
 <body>
 <!-- Silder -->
+<% flash.each do |message_type, message| %>
+              <div class="alert alert-<%= message_type %>"><%= message %></div>
+            <% end %>
+      
 <div class="slider">
     <div id="myCarousel" class="carousel slide" data-ride="carousel" >
         <!-- Indicators -->
