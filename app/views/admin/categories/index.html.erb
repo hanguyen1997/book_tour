@@ -26,11 +26,11 @@
                             <td><%= admin_category.name %></td>
                             <td>
                               <%= link_to "Sửa", edit_admin_category_path(admin_category) %>
-                              <%= image_tag("edit.png") %>
+                              <%= image_tag("edit.png", class: 'image_edit_delete') %>
                               <% if current_user.admin? %>
                                 <%= link_to admin_category_path(admin_category), method: :delete,data: { confirm: "You sure?" } do %>
                                     Delete
-                                    <%= image_tag("delete.png") %>
+                                    <%= image_tag("delete.png", class: 'image_edit_delete') %>
                                 <% end %>
                               <% end %>
                             </td>
