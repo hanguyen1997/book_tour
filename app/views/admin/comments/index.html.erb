@@ -7,6 +7,9 @@
           <div class="card-header card-header-primary" >
             <h4 class="card-title ">Bình Luận</h4>
           </div>
+          <% flash.each do |message_type, message| %>
+            <div class="message alert alert-<%= message_type %>"><%= message %></div>
+          <% end %>
           <div class="card-body">
             <div class="table-responsive">
               <table class="table">
@@ -29,7 +32,7 @@
                     <td>
                        <%= link_to admin_comment_path(admin_comment), method: :delete,data: { confirm: "ban muon xoa binh luan?" } do %>
                          Delete
-                       <%= image_tag("delete.png") %>
+                       <%= image_tag("delete.png", class: 'image_edit_delete') %>
                         <% end %>
                     </td>
                   </tr> 

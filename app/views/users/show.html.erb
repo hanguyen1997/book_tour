@@ -16,6 +16,9 @@
 			</div>
 			<div id="infoUser" class="col-sm-7 ">
 				<h3 class="text-center">Thông Tin Tài Khoản</h3>
+				<% flash.each do |message_type, message| %>
+				    <div class="alert alert-<%= message_type %>"><%= message %></div>
+				<% end %>
 				<dl class="dl-horizontal dl-left text-center">
 					<dt>Họ và tên:</dt>
 					<dd><p><%= @user.name%></p></dd>

@@ -29,17 +29,17 @@
                             <td><%= admin_tour.category.name %></a></td>
                             <td><%= link_to admin_tour.name, admin_tour_path(admin_tour) %></td>
                             <td>
-                              <%= image_tag admin_tour.image.thumb.url if admin_tour.image? %>
+                              <%=  image_tag admin_tour.image.thumb.url if admin_tour.image? %>
                             </td>
                             <td class="ct" id="nd">
                             <%= admin_tour.content %>        
                             </td>
                             <td>
                               <%= link_to "Sửa", edit_admin_tour_path(admin_tour) %>
-                              <%= image_tag("edit.png") %>
+                              <%= image_tag("edit.png", class: 'image_edit_delete')%>
                               <%= link_to admin_tour_path(admin_tour), method: :delete,data: { confirm: "ban muon xoa binh luan?" } do %>
                               Delete
-                              <%= image_tag("delete.png") %>
+                              <%= image_tag("delete.png", class: 'image_edit_delete') %>
                         <% end %>
                             </td>
                           </tr>   

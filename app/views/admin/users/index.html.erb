@@ -40,11 +40,11 @@
                           <% end %>
                           <td>
                               <%= link_to "Sửa", edit_admin_user_path(admin_user) %>
-                              <%= image_tag("edit.png") %>
+                              <%= image_tag("edit.png", class: 'image_edit_delete') %>
                              <% if current_user.admin? %>
                                 <%= link_to admin_user_path(admin_user), method: :delete,data: { confirm: "You sure?" } do %>
                                     Delete
-                                    <%= image_tag("delete.png") %>
+                                    <%= image_tag("delete.png", class: 'image_edit_delete') %>
                                 <% end %>
                               <% end %>
                           </td>

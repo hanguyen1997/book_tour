@@ -136,6 +136,16 @@ figure {
 img {
   vertical-align: middle;
   border-style: none;
+  width: 150px;
+  height: 90p;
+}
+.image_edit_delete{
+  width: 24px;
+  height: 24p;
+}
+img_admin {
+  vertical-align: middle;
+  border-style: none;
 }
 svg:not(:root) {
   overflow: hidden;
