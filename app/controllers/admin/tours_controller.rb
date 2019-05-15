@@ -1,12 +1,13 @@
 module Admin
 	class Admin::ToursController < BaseController
+		before_action :load_tour, except: %i(index new create)
 		before_action :load_categories
+
 		def index
-			 @admin_tours = Tour.all.paginate(page: params[:page], per_page: 10)
+			 @admin_tours = Tour.available.paginate(page: params[:page], per_page: 10)
 		end
 
 		def show
-    		 @admin_tour = Tour.find_by id: params[:id]
     		 @admin_descripption_details = DescriptionDetail.hidden_expired_detail.desription_detail_by_tour @admin_tour
   		end
 
@@ -24,9 +25,7 @@ module Admin
 		    end
 	  	end
 
-	  	def edit
-		    @admin_tour = Tour.find(params[:id])
-		end
+	  	def edit; end
 
 		def update
 		    @admin_tour = Tour.find(params[:id])
@@ -39,7 +38,7 @@ module Admin
 		 end
 
 	  	def destroy
-		    Tour.find_by(id: params[:id]).destroy
+		    @admin_tour.toggle! :deleted_at
 		    flash[:success] = "xoa tour thanh cong"
 		    redirect_to admin_tours_path
 		end
@@ -47,11 +46,18 @@ module Admin
 	  	private
 
 		    def admin_tour
-		      params.require(:tour).permit(:name, :category_id, :content, :image)
+		      params.require(:tour).permit(:name, :category_id, :content, :image, :deleted_at)
 		    end
 
 		    def load_categories
 		      @categories = Category.all
 		    end
+
+		    def load_tour
+		      @admin_tour = Tour.available.find_by id: params[:id]
+		      return if @admin_tour
+		      flash[:danger] = "khong co tour can tim"
+		      redirect_to admin_tours_url
+		  	end
 	end
 end

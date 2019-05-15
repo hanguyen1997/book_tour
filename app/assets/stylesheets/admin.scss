@@ -1931,11 +1931,20 @@ body {
 #themT{
   margin-top:12px; 
 }
-.message{
+.alert-success{
   color: #ffff;
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
   border-bottom: 1px solid #eeeeee;
   background: linear-gradient(60deg,#5ee8a3, #5ee8a3 );
+  font: caption;
+}
+
+.alert-danger{
+  color: #ffff;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  border-bottom: 1px solid #eeeeee;
+  background: linear-gradient(60deg,#e20f0f, #e20f0f );
   font: caption;
 }
