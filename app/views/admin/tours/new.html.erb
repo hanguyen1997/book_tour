@@ -1,4 +1,4 @@
-<% provide(:title, "them tour")%>
+<% provide(:title, "Thêm Mới tour")%>
 <div class="content">
         <div class="container-fluid">
           <div class="row">
@@ -10,6 +10,7 @@
                 </div>
                 <div class="card-body">
                    <%= form_for [:admin, @admin_tour] do |f| %>
+                    <%= hidden_field_tag "tour[deleted_at]", 0 %>
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">

@@ -2,11 +2,11 @@ class ToursController < ApplicationController
   before_action :load_tour, only: :show
 
   def index 
-    @search = Tour.search params[:q]
+    @search = Tour.available.search params[:q]
     if params[:filter] == "tours_domestic"
-      @tours = Tour.tours_domestic(1)
+      @tours = Tour.available.tours_domestic(1)
     elsif params[:filter] == "tours_international" 
-      @tours = Tour.tours_international(2)
+      @tours = Tour.available.tours_international(2)
     else
       @tours = @search.result(distinct: true)
       .paginate(page: params[:page], per_page: 10)
@@ -26,7 +26,7 @@ class ToursController < ApplicationController
   private
 
   def load_tour
-    @tour = Tour.find_by id: params[:id]
+    @tour = Tour.available.find_by id: params[:id]
     return if @tour
     flash[:danger] = "error"
     redirect_to root_url

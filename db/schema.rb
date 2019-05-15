@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_07_073903) do
+ActiveRecord::Schema.define(version: 2019_05_15_065137) do
 
   create_table "bookings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
@@ -93,6 +93,7 @@ ActiveRecord::Schema.define(version: 2019_05_07_073903) do
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "deleted_at"
     t.index ["category_id"], name: "index_tours_on_category_id"
   end
 

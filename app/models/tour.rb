@@ -9,6 +9,7 @@ class Tour < ApplicationRecord
 
   scope :tours_international, ->(category_id){where category_id: category_id}
   scope :tours_domestic, ->(category_id){where category_id: category_id}
+  scope :available, ->{where deleted_at: false}
 
   private
 
