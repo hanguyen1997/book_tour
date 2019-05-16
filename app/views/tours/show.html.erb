@@ -136,7 +136,7 @@
           <p><span class="glyphicon glyphicon-earphone"></span><strong> Liên Hệ</strong>: 19001800</p> 
           <h3><%= descripption_details.price %> USD</h3> 
           <% if descripption_details.max_quantity == 0 && user_signed_in? %>
-            <button id= "bookTour"> HET CHO </button>
+            <button id= "bookTour"> Hết Chổ </button>
           <% elsif user_signed_in? %>
             <%= link_to 'Đặt Tour', new_booking_path(id: descripption_details.id), id: 'bookTour'%> 
           <% else %>

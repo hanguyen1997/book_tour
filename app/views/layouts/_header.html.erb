@@ -20,7 +20,7 @@
                         <span class="glyphicon glyphicon-user"></span>
                         <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <% if user_signed_in? && current_user.role != "customer" %>
+                            <% if user_signed_in? && ( current_user.role == "admin" ||  current_user.role == "staff" ) %>
                               <li>
                                 <%= link_to(raw("<span class='glyphicon glyphicon-list-alt'> Thông Tin Tài Khoản</span>"), current_user) %>
                               </li>
@@ -30,7 +30,7 @@
                                <li>
                                 <%= link_to(raw("<span class='glyphicon glyphicon-log-out'> Đăng Xuất</span>"), destroy_user_session_path, method: :delete ) %>
                               </li>
-                            <% elsif user_signed_in? && current_user.role == "customer" %>
+                            <% elsif user_signed_in? && current_user.role != "admin" %>
                               <li>
                                 <%= link_to(raw("<span class='glyphicon glyphicon-list-alt'> Thông Tin Tài Khoản</span>"), current_user) %>
                               </li>
