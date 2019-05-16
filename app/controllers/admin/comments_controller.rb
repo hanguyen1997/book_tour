@@ -1,11 +1,11 @@
 module Admin
 	class CommentsController < BaseController
 		def index
-			 @admin_comments = Comment.all.paginate(page: params[:page], per_page: 10)
+			 @admin_comments = Review.all.paginate(page: params[:page], per_page: 10)
 		end
 
 		def destroy
-		    Comment.find_by(id: params[:id]).destroy
+		    Review.find_by(id: params[:id]).destroy
 		    flash[:success] = "xoa binh luan"
 		    redirect_to admin_comments_path
 		end

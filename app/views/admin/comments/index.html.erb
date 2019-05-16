@@ -16,7 +16,7 @@
                 <thead class=" text-primary text-center">
                   <th>ID</th>
                   <th>Tên Tour</th>
-                  <th>Hình Ảnh</th>
+                  <th>Ten nguoi binh luan</th>
                   <th class="ct" >Nội Dung</th>
                   <th>Chức Năng</th>
                 </thead>
@@ -24,8 +24,8 @@
                   <% @admin_comments.each do |admin_comment| %>
                   <tr class="text-center">
                     <td><%= admin_comment.id %></td>
-                    <td><%= admin_comment.review.tour.name %>  </td>
-                    <td></td>
+                    <td><%= admin_comment.tour.name %>  </td>
+                    <td><%= admin_comment.user.name %> </td>
                     <td class="ct" id="nd">
                     <%= admin_comment.content %>        
                     </td>
