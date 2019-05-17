@@ -55,6 +55,7 @@
 								<%= hidden_field_tag "booking[description_detail_id]", @description_detail.id %>
 					            <%= hidden_field_tag "booking[user_id]", current_user.id %>
 					            <%= hidden_field_tag "booking[price]", @description_detail.price, id: "price" %>
+					            <%= hidden_field_tag "booking[status]", 0 %>
 								<div class="col-sm-6"><span class="glyphicon glyphicon-transfer"></span> Số Khách Đi Tour: </div>
 								<div class="col-sm-6">
 								<%= f.number_field :quantity, class: 'form-control'%>
